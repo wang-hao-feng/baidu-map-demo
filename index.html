@@ -4,8 +4,24 @@
 <meta charset="utf-8">
 <title>demo</title>
 <link href="styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="brython.js"></script>
 </head>
 
-<body>
+<body onLoad="brython()">
+<header>
+  <label for="search"></label>
+  <input name="search" type="search" class="search_bar" id="search"><input type="submit" name="submit" id="submit" value="搜索">
+</header>
+
+<div class="map">
+<img src="images/地图/中国地图.png" alt="" width="100%"  />
+<div>
+	<img src="images/位置.png" alt="" class="capital 乌鲁木齐" value = "images/地图/省市地图/西北/新疆维吾尔自治区.png" />
+</div> 
+</div>
+
+<script type="text/python"></script>	
+
 </body>
+
 </html>

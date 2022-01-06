@@ -1,0 +1,52 @@
+footer {
+    text-align: center;
+    float: none;
+    clear: none;
+    padding-top: 0px;
+}
+header {
+    clear: both;
+    text-align: center;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0%;
+    clear: both;
+}
+total_map {
+    overflow-x: visible;
+    overflow-y: visible;
+}
+.map {
+	position: relative;
+}
+.button {
+    margin-left: 1%;
+    border-radius: 100px;
+}
+.search_bar {
+    padding-bottom: 0px;
+    margin-bottom: 1%;
+    margin-left: 0%;
+    border-radius: 100px;
+    margin-right: 1%;
+    width: 50%;
+
+
+}
+.capital {
+    width: 13px;
+}
+.乌鲁木齐 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.capital:hover {
+	transform: scale(2, 2);
+	transition-duration: 1s;
+	transition-timing-function: ease;
+}
