@@ -36,17 +36,217 @@ total_map {
 
 
 }
-.capital {
+.place {
     width: 13px;
 }
-.乌鲁木齐 {
+
+/*东北地区*/
+.黑龙江省 {
 	position: absolute;
 	top:23.2%;
 	left:25%;
 }
 
-.capital:hover {
+.吉林省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.辽宁省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+/*华北地区*/
+.北京市 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.河北省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.内蒙古自治区 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.山西省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.天津市 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+/*华东地区*/
+.安徽省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.福建省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.江苏省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.江西省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.山东省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.上海市 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.浙江省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+/*华南地区*/
+.广东省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.广西壮族自治区 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.海南省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+/*华中地区*/
+.河南省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.湖南省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.湖北省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+/*西北地区*/
+.新疆维吾尔自治区 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.甘肃省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.宁夏回族自治区 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.青海省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.陕西省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+/*西南地区*/
+.贵州省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.四川省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.西藏自治区 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.云南省 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.重庆市 {
+	position: absolute;
+	top:23.2%;
+	left:25%;
+}
+
+.capital {
+	display: block
+}
+
+.attraction {
+	visibility: hidden;
+}
+
+.place:hover {
 	transform: scale(2, 2);
 	transition-duration: 1s;
 	transition-timing-function: ease;
+}
+.reset {
+    float: left;
+    display: none;
 }

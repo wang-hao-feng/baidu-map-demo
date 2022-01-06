@@ -4,24 +4,132 @@
 <meta charset="utf-8">
 <title>demo</title>
 <link href="styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="brython.js"></script>
 </head>
 
-<body onLoad="brython()">
+<body>
 <header>
-  <label for="search"></label>
-  <input name="search" type="search" class="search_bar" id="search"><input type="submit" name="submit" id="submit" value="搜索">
+  <input type="reset" class="reset" id="reset" value="返回" onClick="Back()">
+  <input name="search" type="search" class="search_bar" id="search">
+  <input type="submit" name="submit" id="submit" value="搜索" onClick="Search()">
 </header>
-
-<div class="map">
-<img src="images/地图/中国地图.png" alt="" width="100%"  />
-<div>
-	<img src="images/位置.png" alt="" class="capital 乌鲁木齐" value = "images/地图/省市地图/西北/新疆维吾尔自治区.png" />
-</div> 
+<div class="map"> <img src="images/map/中国地图.png" alt="" width="100%" id="map" value="中国地图" />
+  <div> 
+    <!--东北地区-->
+    <input type="image" src="images/位置.png" class="place capital 黑龙江省" value = "黑龙江省" onClick="Capital('黑龙江省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 吉林省" value = "吉林省" onClick="Capital('吉林省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 辽宁省" value = "辽宁省" onClick="Capital('辽宁省')" style="display: block">
+    <!--华北地区-->
+    <input type="image" src="images/位置.png" class="place capital 北京市" value = "北京市" onClick="Capital('北京市')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 河北省" value = "河北省" onClick="Capital('河北省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 内蒙古自治区" value = "内蒙古自治区" onClick="Capital('内蒙古自治区')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 山西省" value = "山西省" onClick="Capital('山西省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 天津市" value = "天津市" onClick="Capital('天津市')" style="display: block">
+    <!--华东地区-->
+    <input type="image" src="images/位置.png" class="place capital 安徽省" value = "安徽省" onClick="Capital('安徽省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 福建省" value = "福建省" onClick="Capital('福建省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 江苏省" value = "江苏省" onClick="Capital('江苏省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 江西省" value = "江西省" onClick="Capital('江西省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 山东省" value = "山东省" onClick="Capital('山东省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 上海市" value = "上海市" onClick="Capital('上海市')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 浙江省" value = "浙江省" onClick="Capital('浙江省')" style="display: block">
+    <!--华南地区-->
+    <input type="image" src="images/位置.png" class="place capital 广东省" value = "广东省" onClick="Capital('广东省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 广西壮族自治区" value = "广西壮族自治区" onClick="Capital('广西壮族自治区')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 海南省" value = "海南省" onClick="Capital('海南省')" style="display: block">
+    <!--华中地区-->
+    <input type="image" src="images/位置.png" class="place capital 河南省" value = "河南省" onClick="Capital('河南省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 湖南省" value = "湖南省" onClick="Capital('湖南省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 湖北省" value = "湖北省" onClick="Capital('湖北省')" style="display: block">
+    <!--西北地区-->
+    <input type="image" src="images/位置.png" class="place capital 新疆维吾尔自治区" value = "新疆维吾尔自治区" onClick="Capital('新疆维吾尔自治区')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 甘肃省" value = "甘肃省" onClick="Capital('甘肃省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 宁夏回族自治区" value = "宁夏回族自治区" onClick="Capital('宁夏回族自治区')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 青海省" value = "青海省" onClick="Capital('青海省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 陕西省" value = "陕西省" onClick="Capital('陕西省')" style="display: block">
+    <!--西南地区-->
+    <input type="image" src="images/位置.png" class="place capital 贵州省" value = "贵州省" onClick="Capital('贵州省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 四川省" value = "四川省" onClick="Capital('四川省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 西藏自治区" value = "西藏自治区" onClick="Capital('西藏自治区')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 云南省" value = "云南省" onClick="Capital('云南省')" style="display: block">
+    <input type="image" src="images/位置.png" class="place capital 重庆市" value = "重庆市" onClick="Capital('重庆市')" style="display: block">
+    
+    <!--北京--> 
+    <!--河北--> 
+    <!--河南--> 
+    <!--浙江--> 
+    <!--江西--> 
+    <!--江苏--> 
+    <!--广西--> 
+    <!--安徽--> 
+    <!--重庆--> 
+    <!--四川--> 
+    <!--贵州--> 
+    <!--上海--> 
+    <!--黑龙江--> 
+    <!--吉林--> 
+    <!--辽宁--> 
+    <!--天津--> 
+    <!--福建--> 
+    <!--广东--> 
+    <!--海南--> 
+    <!--云南--> 
+    <!--湖北--> 
+    <!--湖南--> 
+    <!--山西--> 
+    <!--陕西--> 
+    <!--甘肃--> 
+    <!--青海--> 
+    <!--内蒙--> 
+    <!--新疆--> 
+    <!--西藏--> 
+    <!--山东--> 
+    <!--宁夏--> 
+  </div>
 </div>
-
-<script type="text/python"></script>	
-
+<script type="text/javascript">
+	
+	function Exchange(v)
+	{
+		for (let button of document.getElementsByClassName('capital'))
+			button.style.display = button.style.display == 'block' ? 'none' : 'block';
+		for (let button of document.getElementsByClassName(v))
+		{
+			if (button.className.indexOf('capital') != -1)
+				continue;
+			button.style.display = button.style.display == 'block' ? 'none' : 'block';
+		}
+	}
+	
+	function Back()
+	{
+		var img = document.querySelector('img');
+		img.src = 'images/map/中国地图.png';
+		Exchange(img.value);
+		var back = document.getElementById('reset');
+		back.style.display = 'none';
+		img.value = '中国地图';
+	}
+	
+	function Capital(capital)
+	{
+		var img = document.querySelector('img');
+		img.src = 'images/map/province/' + capital + '.png';
+		img.value = capital
+		var back = document.getElementById('reset');
+		back.style.display = 'block';
+		Exchange(img.value);
+	}
+	
+	function search(text)
+	{
+		return
+	}
+	
+	function Search()
+	{
+		return
+	}
+	
+</script>
 </body>
-
 </html>
