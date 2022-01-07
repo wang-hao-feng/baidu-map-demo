@@ -6,13 +6,14 @@
 <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body class="body">
 <header>
-  <input type="reset" class="reset" id="reset" value="返回" onClick="Back()">
+  <h1 class="title">中国地理知识启蒙教育地图</h1>
+  <button type="reset" class="small button reset" id="reset" value="返回" onClick="Back()">返回</button>
   <input name="search" type="search" class="search_bar" id="search">
-  <input type="submit" name="submit" id="submit" value="搜索" onClick="Search()">
+  <button name="submit" type="submit" class="small button" id="submit" onClick="Search()" >搜索</button>
 </header>
-<div class="map"> <img src="images/map/中国地图.png" alt="" width="100%" id="map" value="中国地图" />
+<div class="map"> <img src="images/map/中国地图.png" alt="" width="100%" id="map" value="中国地图"/>
   <div> 
     <!--东北地区-->
     <input type="image" src="images/位置.png" class="place capital 黑龙江省" value = "黑龙江省" onClick="Capital('黑龙江省')" style="display: block">
@@ -100,24 +101,58 @@
 		}
 	}
 	
+	function fadeIn(obj,time){//淡入函数  实现time毫秒后显示，原理是根据透明度来完成的
+            var startTime=new Date(); 
+            obj.style.opacity=0;//设置下初始值透明度
+            obj.style.display="block";
+            var timer=setInterval(function(){
+                var nowTime=new Date();
+                var prop=(nowTime-startTime)/time;
+                if(prop>=1){
+                    prop=1;//设置最终系数值
+                    clearInterval(timer);
+                }
+                obj.style.opacity=prop;//透明度公式： 初始值+系数*（结束值-初始值）
+            },13);//每隔13ms执行一次function函数
+        };
+        
+    function fadeOut(obj,time){
+            var startTime=new Date(); 
+            obj.style.opacity=1;//设置下初始值透明度
+            obj.style.display="block";
+            var timer=setInterval(function(){
+                var nowTime=new Date();
+                var prop=(nowTime-startTime)/time;
+                if(prop>=1){
+                    prop=1;//设置最终系数值
+                    clearInterval(timer);
+                }
+                obj.style.opacity=1+prop*(0-1);//透明度公式： 初始值+系数*（结束值-初始值）
+            },13);//每隔13ms执行一次function函数
+        };
+	
 	function Back()
 	{
-		var img = document.querySelector('img');
-		img.src = 'images/map/中国地图.png';
-		Exchange(img.value);
+		var map = document.getElementById('map');
+		fadeOut(map, 500);
+		map.src = "images/map/中国地图.png";
+		fadeIn(map, 500);
+		Exchange(map.value);
 		var back = document.getElementById('reset');
-		back.style.display = 'none';
-		img.value = '中国地图';
+		back.style.visibility = 'hidden';
+		map.value = '中国地图';
 	}
 	
 	function Capital(capital)
 	{
-		var img = document.querySelector('img');
-		img.src = 'images/map/province/' + capital + '.jpg';
-		img.value = capital
+		var map = document.getElementById('map');
+		fadeOut(map, 500);
+		map.src = "images/map/province/" + capital + ".jpg";
+		fadeIn(map, 500);
+		map.value = capital
 		var back = document.getElementById('reset');
-		back.style.display = 'block';
-		Exchange(img.value);
+		back.style.visibility = 'visible';
+		Exchange(map.value);
 	}
 	
 	function search(text)
