@@ -37,200 +37,200 @@ total_map {
 
 }
 .place {
-    width: 13px;
+    width: 0.9%;
 }
 
 /*东北地区*/
 .黑龙江省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:20.0%;
+	left:76.6%;
 }
 
 .吉林省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:26.1%;
+	left:75.5%;
 }
 
 .辽宁省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:32.2%;
+	left:73.1%;
 }
 
 /*华北地区*/
 .北京市 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:38.2%;
+	left:64.2%;
 }
 
 .河北省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:43.2%;
+	left:61.4%;
 }
 
 .内蒙古自治区 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:36.2%;
+	left:57.6%;
 }
 
 .山西省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:44.2%;
+	left:59.12%;
 }
 
 .天津市 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:40.4%;
+	left:64.8%;
 }
 
 /*华东地区*/
 .安徽省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:59.9%;
+	left:66.1%;
 }
 
 .福建省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:74.6%;
+	left:69.7%;
 }
 
 .江苏省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:59.5%;
+	left:68.4%;
 }
 
 .江西省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:68.6%;
+	left:64.7%;
 }
 
 .山东省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:47.0%;
+	left:64.9%;
 }
 
 .上海市 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:60.7%;
+	left:72.6%;
 }
 
 .浙江省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:63.6%;
+	left:71.3%;
 }
 
 /*华南地区*/
 .广东省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:84.2%;
+	left:60.8%;
 }
 
 .广西壮族自治区 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:84.4%;
+	left:53.4%;
 }
 
 .海南省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:92.6%;
+	left:55.4%;
 }
 
 /*华中地区*/
 .河南省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:52.7%;
+	left:60.8%;
 }
 
 .湖南省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:70.4%;
+	left:60.0%;
 }
 
 .湖北省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:63.6%;
+	left:62.0%;
 }
 
 /*西北地区*/
 .新疆维吾尔自治区 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:23.4%;
+	left:25.2%;
 }
 
 .甘肃省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:49.0%;
+	left:45.8%;
 }
 
 .宁夏回族自治区 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:42.6%;
+	left:49.5%;
 }
 
 .青海省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:47.0%;
+	left:43.2%;
 }
 
 .陕西省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:54.1%;
+	left:53.1%;
 }
 
 /*西南地区*/
 .贵州省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:74.8%;
+	left:49.5%;
 }
 
 .四川省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:63.5%;
+	left:45.5%;
 }
 
 .西藏自治区 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:62.5%;
+	left:25.0%;
 }
 
 .云南省 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:78.9%;
+	left:43.5%;
 }
 
 .重庆市 {
 	position: absolute;
-	top:23.2%;
-	left:25%;
+	top:66.7%;
+	left:49.9%;
 }
 
 .capital {
