@@ -157,12 +157,17 @@
 	
 	function search(text)
 	{
-		return
+		localStorage.setItem("data", text);
+		var new_window = window.open("index2.html");
 	}
 	
 	function Search()
 	{
-		return
+		text = document.getElementById('search').value;
+		if(text == "")
+			alert("输入不能为空")
+		else
+			search(text);
 	}
 	
 </script>

@@ -1,279 +1,240 @@
 footer {
-    text-align: center;
-    float: none;
-    clear: none;
-    padding-top: 0px;
+  text-align: center;
+  float: none;
+  clear: none;
+  padding-top: 0px;
 }
 header {
-    clear: both;
-    text-align: center;
+  clear: both;
+  text-align: center;
 }
-
 body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 0%;
-    clear: both;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 0%;
+  clear: both;
 }
 total_map {
-    overflow-x: visible;
-    overflow-y: visible;
+  overflow-x: visible;
+  overflow-y: visible;
 }
 .map {
-    position: relative;
-    left: 5%;
-    right: 5%;
-    bottom: 5%;
-    top: 5%;
-    width: 90%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  position: relative;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  top: 5%;
+  width: 90%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-
 .button {
-    margin-left: 1%;
-    border-radius: 100px;
+  margin-left: 1%;
+  border-radius: 100px;
 }
 .search_bar {
-    padding-bottom: 0px;
-    margin-bottom: 1%;
-    margin-left: 0%;
-    border-radius: 100px;
-    margin-right: 1%;
-    width: 50%;
-
-
+  padding-bottom: 0px;
+  margin-bottom: 1%;
+  margin-left: 0%;
+  border-radius: 100px;
+  margin-right: 1%;
+  width: 50%;
 }
 .place {
-    width: 0.9%;
+  width: 0.9%;
 }
-
 /*东北地区*/
 .黑龙江省 {
-	position: absolute;
-	top:20.0%;
-	left:76.6%;
+  position: absolute;
+  top: 20.0%;
+  left: 76.6%;
 }
-
 .吉林省 {
-	position: absolute;
-	top:26.1%;
-	left:75.5%;
+  position: absolute;
+  top: 26.1%;
+  left: 75.5%;
 }
-
 .辽宁省 {
-	position: absolute;
-	top:32.2%;
-	left:73.1%;
+  position: absolute;
+  top: 32.2%;
+  left: 73.1%;
 }
-
 /*华北地区*/
 .北京市 {
-	position: absolute;
-	top:38.2%;
-	left:64.2%;
+  position: absolute;
+  top: 38.2%;
+  left: 64.2%;
 }
-
 .河北省 {
-	position: absolute;
-	top:43.2%;
-	left:61.4%;
+  position: absolute;
+  top: 43.2%;
+  left: 61.4%;
 }
-
 .内蒙古自治区 {
-	position: absolute;
-	top:36.2%;
-	left:57.6%;
+  position: absolute;
+  top: 36.2%;
+  left: 57.6%;
 }
-
 .山西省 {
-	position: absolute;
-	top:44.2%;
-	left:59.12%;
+  position: absolute;
+  top: 44.2%;
+  left: 59.12%;
 }
-
 .天津市 {
-	position: absolute;
-	top:40.4%;
-	left:64.8%;
+  position: absolute;
+  top: 40.4%;
+  left: 64.8%;
 }
-
 /*华东地区*/
 .安徽省 {
-	position: absolute;
-	top:59.9%;
-	left:66.1%;
+  position: absolute;
+  top: 59.9%;
+  left: 66.1%;
 }
-
 .福建省 {
-	position: absolute;
-	top:74.6%;
-	left:69.7%;
+  position: absolute;
+  top: 74.6%;
+  left: 69.7%;
 }
-
 .江苏省 {
-	position: absolute;
-	top:59.5%;
-	left:68.4%;
+  position: absolute;
+  top: 59.5%;
+  left: 68.4%;
 }
-
 .江西省 {
-	position: absolute;
-	top:68.6%;
-	left:64.7%;
+  position: absolute;
+  top: 68.6%;
+  left: 64.7%;
 }
-
 .山东省 {
-	position: absolute;
-	top:47.0%;
-	left:64.9%;
+  position: absolute;
+  top: 47.0%;
+  left: 64.9%;
 }
-
 .上海市 {
-	position: absolute;
-	top:60.7%;
-	left:72.6%;
+  position: absolute;
+  top: 60.7%;
+  left: 72.6%;
 }
-
 .浙江省 {
-	position: absolute;
-	top:63.6%;
-	left:71.3%;
+  position: absolute;
+  top: 63.6%;
+  left: 71.3%;
 }
-
 /*华南地区*/
 .广东省 {
-	position: absolute;
-	top:84.2%;
-	left:60.8%;
+  position: absolute;
+  top: 84.2%;
+  left: 60.8%;
 }
-
 .广西壮族自治区 {
-	position: absolute;
-	top:84.4%;
-	left:53.4%;
+  position: absolute;
+  top: 84.4%;
+  left: 53.4%;
 }
-
 .海南省 {
-	position: absolute;
-	top:92.6%;
-	left:55.4%;
+  position: absolute;
+  top: 92.6%;
+  left: 55.4%;
 }
-
 /*华中地区*/
 .河南省 {
-	position: absolute;
-	top:52.7%;
-	left:60.8%;
+  position: absolute;
+  top: 52.7%;
+  left: 60.8%;
 }
-
 .湖南省 {
-	position: absolute;
-	top:70.4%;
-	left:60.0%;
+  position: absolute;
+  top: 70.4%;
+  left: 60.0%;
 }
-
 .湖北省 {
-	position: absolute;
-	top:63.6%;
-	left:62.0%;
+  position: absolute;
+  top: 63.6%;
+  left: 62.0%;
 }
-
 /*西北地区*/
 .新疆维吾尔自治区 {
-	position: absolute;
-	top:23.4%;
-	left:25.2%;
+  position: absolute;
+  top: 23.4%;
+  left: 25.2%;
 }
-
 .甘肃省 {
-	position: absolute;
-	top:49.0%;
-	left:45.8%;
+  position: absolute;
+  top: 49.0%;
+  left: 45.8%;
 }
-
 .宁夏回族自治区 {
-	position: absolute;
-	top:42.6%;
-	left:49.5%;
+  position: absolute;
+  top: 42.6%;
+  left: 49.5%;
 }
-
 .青海省 {
-	position: absolute;
-	top:47.0%;
-	left:43.2%;
+  position: absolute;
+  top: 47.0%;
+  left: 43.2%;
 }
-
 .陕西省 {
-	position: absolute;
-	top:54.1%;
-	left:53.1%;
+  position: absolute;
+  top: 54.1%;
+  left: 53.1%;
 }
-
 /*西南地区*/
 .贵州省 {
-	position: absolute;
-	top:74.8%;
-	left:49.5%;
+  position: absolute;
+  top: 74.8%;
+  left: 49.5%;
 }
-
 .四川省 {
-	position: absolute;
-	top:63.5%;
-	left:45.5%;
+  position: absolute;
+  top: 63.5%;
+  left: 45.5%;
 }
-
 .西藏自治区 {
-	position: absolute;
-	top:62.5%;
-	left:25.0%;
+  position: absolute;
+  top: 62.5%;
+  left: 25.0%;
 }
-
 .云南省 {
-	position: absolute;
-	top:78.9%;
-	left:43.5%;
+  position: absolute;
+  top: 78.9%;
+  left: 43.5%;
 }
-
 .重庆市 {
-	position: absolute;
-	top:66.7%;
-	left:49.9%;
+  position: absolute;
+  top: 66.7%;
+  left: 49.9%;
 }
-
 .capital {
-	display: block
+  display: block
 }
-
 .attraction {
-	visibility: hidden;
+  visibility: hidden;
 }
-
 .place:hover {
-	transform: scale(2, 2);
-	transition-duration: 1s;
-	transition-timing-function: ease;
+  transform: scale(2, 2);
+  transition-duration: 1s;
+  transition-timing-function: ease;
 }
 .reset {
-    float: left;
-    visibility: hidden;
-    border-radius: 100px;
+  float: left;
+  visibility: hidden;
+  border-radius: 100px;
 }
 .title {
     font-size: 100%;
+    text-shadow: 0px 0px #FFFFFF;
+    color: #FFFFFF;
 }
-
 .centered {
-  margin:50px auto;
-  text-align:center;
+  margin: 50px auto;
+  text-align: center;
 }
-
-.button::-moz-focus-inner{
+.button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-
-.button{
+.button {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -286,15 +247,13 @@ total_map {
   text-decoration: none;
   white-space: nowrap;
   color: #555;
-  
   background-color: #ddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
-  background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
-  background-image: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
-  background-image: -ms-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
-  background-image: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
-  background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
-  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   -webkit-transition: background-color .2s ease-out;
   -moz-transition: background-color .2s ease-out;
   -ms-transition: background-color .2s ease-out;
@@ -307,8 +266,7 @@ total_map {
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
   box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
-  text-shadow: 0 1px 0 rgba(255,255,255, .9);
-  
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .9);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -316,13 +274,11 @@ total_map {
   -ms-user-select: none;
   user-select: none;
 }
-
-.button:hover{
+.button:hover {
   background-color: #eee;
   color: #555;
 }
-
-.button:active{
+.button:active {
   background: #e9e9e9;
   position: relative;
   top: 1px;
@@ -331,8 +287,7 @@ total_map {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
 }
-
-.button[disabled], .button[disabled]:hover, .button[disabled]:active{
+.button[disabled], .button[disabled]:hover, .button[disabled]:active {
   border-color: #eaeaea;
   background: #fafafa;
   cursor: default;
@@ -344,15 +299,13 @@ total_map {
   box-shadow: none !important;
   text-shadow: none !important;
 }
-
 /* Smaller buttons styles */
-
-.button.small{
+.button.small {
   padding: 4px 12px;
 }
 .body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #080808;
-    background-image: url(images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #080808;
+  background-image: url(images/background.png);
 }

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>展示页面</title>
+<link href="styles2.css" rel="stylesheet" type="text/css">
+</head>
+<header>
+  <h1 class="title">中国地理知识启蒙教育地图</h1>
+  <button type="reset" class="small button reset" id="reset" value="返回" onClick="Back()">返回</button>
+  <input name="search" type="search" class="search_bar" id="search">
+  <button name="submit" type="submit" class="small button" id="submit" onClick="Search()" >搜索</button>
+</header>
+<body class="body">
+<div class="text" id="a">第一个</div>
+<div class="text" id="b">第二个</div>
+<script type="text/javascript">
+	window.addEventListener("load", getText, false);
+	
+	function getText()
+	{
+		var text_box1 = document.getElementById("a");
+		search(localStorage.getItem("data"));
+		localStorage.removeItem("data");
+	}
+	
+	function search(text)
+	{
+		
+	}
+	
+	function Search()
+	{
+		text = document.getElementById('search').value;
+		if(text == "")
+			alert("输入不能为空")
+		else
+			search(text);
+	}
+	
+</script>
+</body>
+</html>
