@@ -14,24 +14,33 @@
 <body class="body">
 <div class="text" id="a">第一个</div>
 <div class="text" id="b">第二个</div>
+<script type="text/javascript" src="eel.js"></script>
 <script type="text/javascript">
 	window.addEventListener("load", getText, false);
+	eel.expose(getJSON);
+	var message = '';
 	
 	function getText()
 	{
-		var text_box1 = document.getElementById("a");
 		search(localStorage.getItem("data"));
 		localStorage.removeItem("data");
 	}
 	
-	function search(text)
+	function getJSON(json)
 	{
-		
+		message = json;
+	}
+
+	async function search(text)
+	{
+		var text_box1 = document.getElementById("a");
+		await eel.test(text)();
+		text_box1.innerHTML = message.data;
 	}
 	
 	function Search()
 	{
-		text = document.getElementById('search').value;
+		var text = document.getElementById('search').value;
 		if(text == "")
 			alert("输入不能为空")
 		else

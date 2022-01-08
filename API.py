@@ -1,4 +1,3 @@
-
 # coding=utf-8
 
 import sys
@@ -32,13 +31,13 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # EasyDL官网获取到URL
 
 # ak
-API_KEY = 'kQWXQ8oe5G5T7ATzXXXXXXXX'
+API_KEY = 'NSUVdo3wzXSOUfGammwAaXzy'
 
 # sk
-SECRET_KEY = 'Y30GtHsKzyH6fUUsQl32GvoBXXXXXXXX'
+SECRET_KEY = 'UMC3KS7x3SMkYP09LTiPUXcVXyEav7i2'
 
 # url
-EASYDL_TEXT_CLASSIFY_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/lirics_gen"
+EASYDL_TEXT_CLASSIFY_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/intro_1"
 
 """  TOKEN start """
 TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
@@ -58,7 +57,7 @@ def fetch_token():
     try:
         f = urlopen(req, timeout=5)
         result_str = f.read()
-        print('success')
+        #print('success')
     except URLError as err:
         print(err)
     if (IS_PY3):
@@ -106,7 +105,7 @@ if __name__ == '__main__':
     # 拼接url
     url = EASYDL_TEXT_CLASSIFY_URL + "?access_token=" + token
 
-    text = "歌名：晴天；歌词："
+    text = "地点：沧州市迎宾路小学 介绍："
 
     # 请求接口
     # 测试
@@ -117,5 +116,3 @@ if __name__ == '__main__':
                        })
 
     result_json = json.loads(response)['result']['content']
-
-    print('u{0}'.format(result_json))
