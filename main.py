@@ -3,7 +3,7 @@ import json
 import os
 import time
 
-sleep_time = 0
+sleep_time = 5
 
 class API():
     def __init__(self):

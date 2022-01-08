@@ -335,7 +335,7 @@ total_map {
   display: block
 }
 .attraction {
-  display: none;
+  display: block;
 }
 .place:hover {
   transform: scale(2, 2);
