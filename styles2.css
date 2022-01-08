@@ -11,22 +11,23 @@ header {
 }
 body {
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: 100% 0%;
-    clear: both;
     text-align: left;
-}
-.body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #080808;
-    background-image: url(images/background.png);
-    text-align: left;
+    height: 100%;
+    width: 100%;
+    background-image: url(images/background2.png);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-clip: border-box;
+    background-size: 100% 100%;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
 }
 .title {
-  font-size: 100%;
-  text-align: center;
-  color: #FFFFFF;
+    font-size: 100%;
+    text-align: center;
+    color: #000000;
 }
 .search_bar {
   padding-bottom: 0px;
@@ -93,8 +94,8 @@ body {
 }
 .button:active {
   background: #e9e9e9;
-  position: relative;
-  top: 1px;
+  //position: relative;
+  //top: 1px;
   text-shadow: none;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
@@ -122,17 +123,40 @@ body {
   border-radius: 100px;
 }
 .text {
-    width: 80%;
+    width: 44%;
+    height: 28.3%;
     word-wrap: break-word;
     word-break: normal;
     color: #000000;
-    border: 1px solid #96C2F1;
-    top: 0%;
-    background-color: #EFF7FF;
+    top: 27.9%;
     float: none;
     border-radius: 5px;
-    margin-left: 10%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F6F6F6;
+    position: fixed;
+    left: 27.5%;
+    border-width: 0px;
 }
-.div{
+html, body{
+    height: 100%;
     text-align: center;
+    margin-right: 0px;
+}
+.next{
+    position: fixed;
+    top: 54%;
+    right: 9%;
+}
+.again{
+    right: 9%;
+    top: 49%;
+    position: fixed;
+}
+.next:active{
+	position: fixed;
+    top: 54%;
+    right: 9%;
 }

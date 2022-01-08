@@ -19,14 +19,15 @@ total_map {
   overflow-y: visible;
 }
 .map {
-  position: relative;
-  left: 5%;
-  right: 5%;
-  bottom: 5%;
-  top: 5%;
-  width: 90%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    position: relative;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    top: 5%;
+    width: 90%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: 2px solid #000000;
 }
 .button {
   margin-left: 1%;
@@ -205,11 +206,136 @@ total_map {
   top: 66.7%;
   left: 49.9%;
 }
+/*河北*/
+/*承德*/
+.承德避暑山庄{
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*秦皇岛*/
+.山海关 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*保定*/
+.白石山 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*邯郸*/
+.娲皇宫 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*石家庄*/
+.西柏坡 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*黑龙江*/
+/*大兴安岭*/
+.大兴安岭 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*哈尔滨*/
+.冰雪大世界 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*漠河*/
+.漠河北极村 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*黑河*/
+.五大连池 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*牡丹江*/
+.镜泊湖 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*内蒙*/
+/*呼伦贝尔*/
+.呼伦贝尔大草原 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*兴安盟阿尔山市*/
+.阿尔山 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*鄂尔多斯*/
+.成吉思汗陵 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*酒泉*/
+.胡杨林 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*满洲里*/
+.满洲里中俄边境旅游区 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*广东*/
+/*广州*/
+.白云山 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*韶关*/
+.丹霞山 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*中山*/
+.孙中山故里 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*清远*/
+.连州地下河 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+/*惠州*/
+.惠州西湖 {
+  position: absolute;
+  top: 50.0%;
+  left: 50.0%;
+}
+
 .capital {
   display: block
 }
 .attraction {
-  visibility: hidden;
+  display: none;
 }
 .place:hover {
   transform: scale(2, 2);
@@ -224,7 +350,7 @@ total_map {
 .title {
     font-size: 100%;
     text-shadow: 0px 0px #FFFFFF;
-    color: #FFFFFF;
+    color: #000000;
 }
 .centered {
   margin: 50px auto;

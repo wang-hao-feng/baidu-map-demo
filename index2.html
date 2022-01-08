@@ -7,13 +7,16 @@
 </head>
 <header>
   <h1 class="title">中国地理知识启蒙教育地图</h1>
-  <button type="reset" class="small button reset" id="reset" value="返回" onClick="Back()">返回</button>
+  <button type="reset" class="small button reset" id="reset" value="返回">返回</button>
   <input name="search" type="search" class="search_bar" id="search">
   <button name="submit" type="submit" class="small button" id="submit" onClick="Search()" >搜索</button>
 </header>
 <body class="body">
-<div class="text" id="a">第一个</div>
-<div class="text" id="b">第二个</div>
+<textarea class="text" id="textarea"></textarea>
+<button class="small button next" id="test" style="display: inline-block" onClick="BeginTest()">开始测试</button>
+<button class="small button again" id="again" style="display: none" onClick="BeginTest()">再测一次</button>
+<button class="small button next" id="answer" style="display: none" onClick="Next()">来个答案</button>
+<button class="small button next" id="suggest" style="display: none" onClick="Suggest()">旅行建议</button>
 <script type="text/javascript" src="eel.js"></script>
 <script type="text/javascript">
 	window.addEventListener("load", getText, false);
@@ -22,7 +25,7 @@
 	
 	function getText()
 	{
-		search(localStorage.getItem("data"));
+		Introduce(localStorage.getItem("data"));
 		localStorage.removeItem("data");
 	}
 	
@@ -31,22 +34,72 @@
 		message = json;
 	}
 
-	async function search(text)
+	//true表示显示，false表示不显示
+	function GetButtonDisplay(flag)
 	{
-		var text_box1 = document.getElementById("a");
-		await eel.test(text)();
-		text_box1.innerHTML = message.data;
+		return flag ? "inline-block" : "none";
+	}
+
+	function ChangeButtonDisplay(test_flag, again_flag, answer_flag, suggest_flag)
+	{
+		var test = document.getElementById('test');
+		test.style.display = GetButtonDisplay(test_flag);
+
+		var again = document.getElementById('again');
+		again.style.display = GetButtonDisplay(again_flag);
+
+		var answer = document.getElementById('answer');
+		answer.style.display = GetButtonDisplay(answer_flag);
+
+		var suggest = document.getElementById('suggest');
+		suggest.style.display = GetButtonDisplay(suggest_flag);
 	}
 	
 	function Search()
 	{
-		var text = document.getElementById('search').value;
-		if(text == "")
+		var location = document.getElementById('search').value;
+		if(location == "")
 			alert("输入不能为空")
 		else
-			search(text);
+			Introduce(location);
 	}
 	
+	async function Introduce(location)
+	{
+		var textarea= document.getElementById("textarea");
+		textarea.innerHTML = '正在加载景点介绍...';
+		ChangeButtonDisplay(true, false, false, false);
+		await eel.Introduce(location)();
+		textarea.innerHTML = message.introduce;
+	}
+
+	async function BeginTest()
+	{
+		var textarea = document.getElementById('textarea');
+		textarea.innerHTML = '正在加载试题...';
+		ChangeButtonDisplay(false, false, true, false);
+		await eel.Cut()();
+		textarea.innerHTML = message.cut;
+	}
+
+	async function Next()
+	{
+		var textarea = document.getElementById('textarea');
+		await eel.Next()();
+		textarea.innerHTML = message.next;
+		if(message.finished)
+			ChangeButtonDisplay(false, true, false, true);
+	}
+
+	async function Suggest()
+	{
+		var textarea = document.getElementById('textarea');
+		textarea.innerHTML = "正在加载旅行建议...";
+		ChangeButtonDisplay(false, false, false, false);
+		await eel.Suggest()();
+		textarea.innerHTML = message.suggest;
+	}
+
 </script>
 </body>
 </html>

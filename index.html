@@ -54,37 +54,30 @@
     <input type="image" src="images/位置.png" class="place capital 云南省" value = "云南省" onClick="Capital('云南省')" style="display: block">
     <input type="image" src="images/位置.png" class="place capital 重庆市" value = "重庆市" onClick="Capital('重庆市')" style="display: block">
     
-    <!--北京--> 
-    <!--河北--> 
-    <!--河南--> 
-    <!--浙江--> 
-    <!--江西--> 
-    <!--江苏--> 
-    <!--广西--> 
-    <!--安徽--> 
-    <!--重庆--> 
-    <!--四川--> 
-    <!--贵州--> 
-    <!--上海--> 
+    <!--河北-->
+    <input type="image" src="images/位置.png" class="place attraction 承德避暑山庄" onClick="Introduce('承德避暑山庄')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 山海关" onClick="Introduce('山海关')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 白石山" onClick="Introduce('白石山')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 娲皇宫"  onClick="Introduce('娲皇宫')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 西柏坡"  onClick="Introduce('西柏坡')" style="display: none">
     <!--黑龙江--> 
-    <!--吉林--> 
-    <!--辽宁--> 
-    <!--天津--> 
-    <!--福建--> 
+    <input type="image" src="images/位置.png" class="place attraction 大兴安岭"  onClick="Introduce('大兴安岭')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 冰雪大世界"  onClick="Introduce('冰雪大世界')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 漠河北极村"  onClick="Introduce('漠河北极村')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 五大连池"  onClick="Introduce('五大连池')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 镜泊湖"  onClick="Introduce('镜泊湖')" style="display: none">
+    <!--内蒙-->  
+    <input type="image" src="images/位置.png" class="place attraction 呼伦贝尔大草原"  onClick="Introduce('呼伦贝尔大草原')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 阿尔山"  onClick="Introduce('阿尔山')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 成吉思汗陵"  onClick="Introduce('成吉思汗陵')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 胡杨林"  onClick="Introduce('胡杨林')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 满洲里中俄边境旅游区"  onClick="Introduce('满洲里中俄边境旅游区')" style="display: none">
     <!--广东--> 
-    <!--海南--> 
-    <!--云南--> 
-    <!--湖北--> 
-    <!--湖南--> 
-    <!--山西--> 
-    <!--陕西--> 
-    <!--甘肃--> 
-    <!--青海--> 
-    <!--内蒙--> 
-    <!--新疆--> 
-    <!--西藏--> 
-    <!--山东--> 
-    <!--宁夏--> 
+    <input type="image" src="images/位置.png" class="place attraction 白云山"  onClick="Introduce('白云山')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 丹霞山"  onClick="Introduce('丹霞山')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 孙中山故里"  onClick="Introduce('孙中山故里')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 连州地下河"  onClick="Introduce('连州地下河')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 惠州西湖"  onClick="Introduce('惠州西湖')" style="display: none">
   </div>
 </div>
 <script type="text/javascript">
@@ -155,21 +148,21 @@
 		Exchange(map.value);
 	}
 	
-	function search(text)
+	function Introduce(location)
 	{
-		localStorage.setItem("data", text);
+		localStorage.setItem("data", location);
 		var new_window = window.open("index2.html");
 	}
 	
 	function Search()
 	{
-		text = document.getElementById('search').value;
-		if(text == "")
+		location = document.getElementById('search').value;
+		if(location == "")
 			alert("输入不能为空")
 		else
-			search(text);
+			Introduce(location);
 	}
-	
+
 </script>
 </body>
 </html>
