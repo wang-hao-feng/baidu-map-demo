@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>demo</title>
+<link href="label.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body">
+<header>
+  <h1 class="title">中国地理知识启蒙教育地图</h1>
+  <button type="reset" class="small button reset" id="reset" value="返回" onClick="Back()">返回</button>
+  <input name="search" type="search" class="search_bar" id="search">
+  <button name="submit" type="submit" class="small button" id="submit" onClick="Search()" >搜索</button>
+</header>
+<div class="map"> <img src="images/map/province/河北省.jpg" alt="" width="100%" id="map" value="中国地图"/>
+  <div>
+    <!--河北-->
+    <input type="image" src="images/位置.png" class="place attraction 承德避暑山庄" onClick="Introduce('承德避暑山庄')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 山海关" onClick="Introduce('山海关')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 白石山" onClick="Introduce('白石山')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 娲皇宫"  onClick="Introduce('娲皇宫')" style="display: none">
+    <input type="image" src="images/位置.png" class="place attraction 西柏坡"  onClick="Introduce('西柏坡')" style="display: none">
+  </div>
+</div>
+</body>
+</html>
