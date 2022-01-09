@@ -176,4 +176,4 @@ def Suggest():
 if __name__ == "__main__":
     api = API()
     eel.init(os.getcwd())
-    eel.start("index.html", mode="edge")
+    eel.start("label.html", mode="edge")
