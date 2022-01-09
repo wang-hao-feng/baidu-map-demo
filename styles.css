@@ -241,63 +241,63 @@ total_map {
 /*大兴安岭*/
 .大兴安岭 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 28.0%;
+  left: 12.0%;
 }
 /*哈尔滨*/
 .冰雪大世界 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 68.5%;
+  left: 35.0%;
 }
 /*漠河*/
 .漠河北极村 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 15.0%;
+  left: 10.0%;
 }
 /*黑河*/
 .五大连池 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 48.5%;
+  left: 32.0%;
 }
 /*牡丹江*/
 .镜泊湖 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 82.0%;
+  left: 54.5%;
 }
 /*内蒙*/
 /*呼伦贝尔*/
 .呼伦贝尔大草原 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 27.1%;
+  left: 71.1%;
 }
 /*兴安盟阿尔山市*/
 .阿尔山 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 43.0%;
+  left: 78.0%;
 }
 /*鄂尔多斯*/
 .成吉思汗陵 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 85.6%;
+  left: 40.67%;
 }
 /*酒泉*/
 .胡杨林 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 61.0%;
+  left: 15.0%;
 }
 /*满洲里*/
 .满洲里中俄边境旅游区 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 26.7%;
+  left: 69.0%;
 }
 /*广东*/
 /*广州*/
@@ -348,9 +348,9 @@ total_map {
   border-radius: 100px;
 }
 .title {
-    font-size: 100%;
     text-shadow: 0px 0px #FFFFFF;
-    color: #000000;
+    color: #0075FA;
+    font-size: 45px;
 }
 .centered {
   margin: 50px auto;

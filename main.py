@@ -61,6 +61,7 @@ class API():
     def Cut(self):
         self.counter = 0
         self.holeResult = '填空：'
+        self.holeLoc = []
         lac_result = self.lac.run(self.introduce)
         i,sumLength = 0,0
         for label in lac_result[1]:

@@ -25,9 +25,9 @@ body {
     position: relative;
 }
 .title {
-    font-size: 100%;
     text-align: center;
-    color: #000000;
+    color: #0075FA;
+    font-size: 45px;
 }
 .search_bar {
   padding-bottom: 0px;
@@ -139,6 +139,11 @@ body {
     position: fixed;
     left: 27.5%;
     border-width: 0px;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    text-indent: 10px;
 }
 html, body{
     height: 100%;
