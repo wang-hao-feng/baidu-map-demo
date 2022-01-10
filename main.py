@@ -15,7 +15,7 @@ from LAC import LAC
 ssl._create_default_https_context = ssl._create_unverified_context
 API_KEY = 'NSUVdo3wzXSOUfGammwAaXzy'
 SECRET_KEY = 'UMC3KS7x3SMkYP09LTiPUXcVXyEav7i2'
-EASYDL_TEXT_CLASSIFY_URL_1 = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/intro_1"
+EASYDL_TEXT_CLASSIFY_URL_1 = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/intros_gen"
 EASYDL_TEXT_CLASSIFY_URL_2 = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/tripSug"
 TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
 PUNCTUATION_LIST = [ '.', '。', '?', '？', '!', ';', '；']
@@ -96,10 +96,14 @@ class API():
                                'max_gen_len': 128
                            })
 
-        content = json.loads(response)['result']['content']
-        result_content = self.cut(content)
-
-        return result_content
+        err = False
+        if "result" in json.loads(response):
+            content = json.loads(response)['result']['content']
+            result_content = self.cut(content)
+        else:
+            result_content = ""
+            err = json.loads(response)['error_code'] != 0
+        return {"suggest":result_content,"error":err}
 
     def fetch_token(self):
         params = {'grant_type': 'client_credentials',
@@ -172,7 +176,7 @@ def Next():
 @eel.expose
 def Suggest():
     suggest = api.Suggest()
-    eel.getJSON({"suggest":suggest})
+    eel.getJSON({"suggest":suggest['suggest'], 'error':suggest['error']})
 
 if __name__ == "__main__":
     api = API()

@@ -113,7 +113,10 @@
 		var textarea = document.getElementById('textarea');
 		textarea.innerHTML = "正在加载旅行建议...";
 		ChangeButtonDisplay(false, false, false, false, false, true);
-		await eel.Suggest()();
+		message = {"suggest":"", "error":true}
+		count = 0;
+		while(message.error)
+			await eel.Suggest()();
 		textarea.innerHTML = message.suggest;
 	}
 
