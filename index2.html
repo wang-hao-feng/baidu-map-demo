@@ -13,6 +13,7 @@
 </header>
 <body class="body">
 <textarea class="text" id="textarea"></textarea>
+<button class="small button again" id="new" style="display: block" onClick="NewIntroduce()">刷新建议</button>
 <button class="small button next" id="test" style="display: inline-block" onClick="BeginTest()">开始测试</button>
 <button class="small button again" id="again" style="display: none" onClick="BeginTest()">再测一次</button>
 <button class="small button next" id="answer" style="display: none" onClick="Next()">来个答案</button>
@@ -40,8 +41,11 @@
 		return flag ? "inline-block" : "none";
 	}
 
-	function ChangeButtonDisplay(test_flag, again_flag, answer_flag, suggest_flag)
+	function ChangeButtonDisplay(new_flag, test_flag, again_flag, answer_flag, suggest_flag)
 	{
+		var new_ = document.getElementById('new');
+		new_.style.display = GetButtonDisplay(new_flag);
+
 		var test = document.getElementById('test');
 		test.style.display = GetButtonDisplay(test_flag);
 
@@ -68,8 +72,17 @@
 	{
 		var textarea= document.getElementById("textarea");
 		textarea.innerHTML = '正在加载景点介绍...';
-		ChangeButtonDisplay(true, false, false, false);
+		ChangeButtonDisplay(true, true, false, false, false);
 		await eel.Introduce(location)();
+		textarea.innerHTML = message.introduce;
+	}
+
+	async function NewIntroduce()
+	{
+		var textarea= document.getElementById("textarea");
+		textarea.innerHTML = '正在加载景点介绍...';
+		ChangeButtonDisplay(true, true, false, false, false);
+		await eel.NewIntroduce()();
 		textarea.innerHTML = message.introduce;
 	}
 
@@ -77,7 +90,7 @@
 	{
 		var textarea = document.getElementById('textarea');
 		textarea.innerHTML = '正在加载试题...';
-		ChangeButtonDisplay(false, false, true, false);
+		ChangeButtonDisplay(false, false, false, true, false);
 		await eel.Cut()();
 		textarea.innerHTML = message.cut;
 	}
@@ -88,14 +101,14 @@
 		await eel.Next()();
 		textarea.innerHTML = message.next;
 		if(message.finished)
-			ChangeButtonDisplay(false, true, false, true);
+			ChangeButtonDisplay(false, false, true, false, true);
 	}
 
 	async function Suggest()
 	{
 		var textarea = document.getElementById('textarea');
 		textarea.innerHTML = "正在加载旅行建议...";
-		ChangeButtonDisplay(false, false, false, false);
+		ChangeButtonDisplay(false, false, false, false, false);
 		await eel.Suggest()();
 		textarea.innerHTML = message.suggest;
 	}

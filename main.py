@@ -154,6 +154,11 @@ def Introduce(location):
     eel.getJSON({"introduce":introduce})
 
 @eel.expose
+def NewIntroduce():
+    introduce = api.Introduce(api.location)
+    eel.getJSON({'introduce':introduce})
+
+@eel.expose
 def Cut():
     api.Cut()
     eel.getJSON({"cut":api.holeResult})
