@@ -140,6 +140,7 @@ class API():
 
     def cut(self, content):
         length = len(content)
+        count = 0
         for i in range(length):
             if content[i] in PUNCTUATION_LIST:
                 count = i
