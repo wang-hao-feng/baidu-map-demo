@@ -13,14 +13,12 @@ from urllib.parse import quote_plus
 from LAC import LAC
 
 ssl._create_default_https_context = ssl._create_unverified_context
-API_KEY_1 = 'NSUVdo3wzXSOUfGammwAaXzy'
-SECRET_KEY_1 = 'UMC3KS7x3SMkYP09LTiPUXcVXyEav7i2'
+API_KEY = 'NSUVdo3wzXSOUfGammwAaXzy'
+SECRET_KEY = 'UMC3KS7x3SMkYP09LTiPUXcVXyEav7i2'
 EASYDL_TEXT_CLASSIFY_URL_1 = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/intro_1"
-API_KEY_2 = ''
-SECRET_KEY_2 = ''
-EASYDL_TEXT_CLASSIFY_URL_2 = ''
+EASYDL_TEXT_CLASSIFY_URL_2 = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/tripSug"
 TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
-PUNCTUATION_LIST = [',', '，', '.', '。', '?', '？', '!', ';', '；']
+PUNCTUATION_LIST = [ '.', '。', '?', '？', '!', ';', '；']
 HOLE_LABEL_LIST = ['PER', 'LOC', 'ORG', 'TIME', 'nz', 'nw']
 
 class API():
@@ -34,11 +32,8 @@ class API():
     
     def Introduce(self, location):
         self.location = location
-        params = {'grant_type': 'client_credentials',
-                  'client_id': API_KEY_1,
-                  'client_secret': SECRET_KEY_1}
         # 获取access token
-        token = self.fetch_token(params)
+        token = self.fetch_token()
 
         # 拼接url
         url = EASYDL_TEXT_CLASSIFY_URL_1 + "?access_token=" + token
@@ -67,7 +62,7 @@ class API():
         for label in lac_result[1]:
             length = len(lac_result[0][i])
             if label in HOLE_LABEL_LIST:
-                self.holeResult = self.holeResult + '__' * length
+                self.holeResult = self.holeResult + '__' * (length + 1)
                 self.holeLoc.append([sumLength, sumLength + length])
             else:
                 self.holeResult = self.holeResult + lac_result[0][i]
@@ -77,7 +72,7 @@ class API():
     def Next(self):
         x = self.holeLoc[self.counter][0]
         y = self.holeLoc[self.counter][1]
-        self.holeResult = self.holeResult[:x + 3] + self.introduce[x:y] + self.holeResult[x + 3 + 2 * (y - x):]
+        self.holeResult = self.holeResult[:x + 4 + 2 * self.counter] + self.introduce[x:y] + self.holeResult[x + 4 + 2 * (y - x + self.counter):]
         self.counter += 1
         if self.counter >= len(self.holeLoc):
             return True
@@ -85,17 +80,13 @@ class API():
     
     #根据列表和计数器挖空
     
-    def Suggest(self, location):
-        params = {'grant_type': 'client_credentials',
-                  'client_id': API_KEY_2,
-                  'client_secret': SECRET_KEY_2}
-
+    def Suggest(self):
         # 获取access token
-        token = self.fetch_token(params)
+        token = self.fetch_token()
 
         # 拼接url
         url = EASYDL_TEXT_CLASSIFY_URL_2 + "?access_token=" + token
-        text = '问题：去' + location +'旅行有什么建议 回答：'
+        text = '问题：去' + self.location +'旅行有什么建议 回答：'
 
         # 请求接口
         # 测试
@@ -110,7 +101,10 @@ class API():
 
         return result_content
 
-    def fetch_token(self,params):
+    def fetch_token(self):
+        params = {'grant_type': 'client_credentials',
+                  'client_id': API_KEY,
+                  'client_secret': SECRET_KEY}
         post_data = urlencode(params)
         post_data = post_data.encode('utf-8')
         req = Request(TOKEN_URL, post_data)
@@ -177,4 +171,4 @@ def Suggest():
 if __name__ == "__main__":
     api = API()
     eel.init(os.getcwd())
-    eel.start("label.html", mode="edge")
+    eel.start("index.html", mode="edge")
