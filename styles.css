@@ -330,6 +330,223 @@ total_map {
   top: 44.2%;
   left: 58.2%;
 }
+/*贵州*/
+/*铜仁*/
+.梵净山 {
+  position: absolute;
+  top: 32.0%;
+  left: 80.0%;
+}
+/*安顺*/
+.黄果树瀑布 {
+  position: absolute;
+  top: 65.0%;
+  left: 40.0%;
+}
+/*毕节*/
+.织金洞 {
+  position: absolute;
+  top: 50.0%;
+  left: 41.5%;
+}
+/*遵义*/
+.赤水丹霞 {
+  position: absolute;
+  top: 19.5%;
+  left: 41.5%;
+}
+/*黔东南苗族侗族自治州*/
+.镇远古城 {
+  position: absolute;
+  top: 47.0%;
+  left: 74.0%;
+}
+/*上海*/
+/*浦东新区*/
+.东方明珠 {
+  position: absolute;
+  top: 51.5%;
+  left: 47.0%;
+}
+/*浦东新区*/
+.上海迪士尼乐园 {
+  position: absolute;
+  top: 57.0%;
+  left: 60.0%;
+}
+/*黄浦区*/
+.南京路步行街 {
+  position: absolute;
+  top: 51.5%;
+  left: 41.5%;
+}
+/*黄浦区*/
+.城隍庙 {
+  position: absolute;
+  top: 53.0%;
+  left: 45.0%;
+}
+/*静安区*/
+.静安寺 {
+  position: absolute;
+  top: 54.0%;
+  left: 38.0%;
+}
+/*吉林*/
+/*长春*/
+.净月潭 {
+  position: absolute;
+  top: 45.0%;
+  left: 40.5%;
+}
+/*白山*/
+.长白山 {
+  position: absolute;
+  top: 74.0%;
+  left: 62.0%;
+}
+/*敦化*/
+.六鼎山 {
+  position: absolute;
+  top: 47.0%;
+  left: 62.0%;
+}
+/*通化*/
+.高句丽文物古迹 {
+  position: absolute;
+  top: 89.0%;
+  left: 46.0%;
+}
+/*辉南县*/
+.北山 {
+  position: absolute;
+  top: 68.0%;
+  left: 44.0%;
+}
+/*辽宁*/
+/*鞍山*/
+.千山景区 {
+  position: absolute;
+  top: 50.5%;
+  left: 58.0%;
+}
+/*本溪*/
+.本溪水洞 {
+  position: absolute;
+  top: 43.0%;
+  left: 65.0%;
+}
+/*敦化*/
+.沈阳故宫 {
+  position: absolute;
+  top: 33.0%;
+  left: 60.0%;
+}
+/*锦州*/
+.辽西九华山 {
+  position: absolute;
+  top: 49.0%;
+  left: 38.5%;
+}
+/*古塔区*/
+.古塔公园 {
+  position: absolute;
+  top: 46.0%;
+  left: 38.0%;
+}
+/*天津*/
+/*南开区*/
+.津门故里 {
+  position: absolute;
+  top: 61.0%;
+  left: 39.0%;
+}
+/*蓟州区*/
+.盘山 {
+  position: absolute;
+  top: 22.5%;
+  left: 44.0%;
+}
+/*滨海新区*/
+.大沽炮台 {
+  position: absolute;
+  top: 66.0%;
+  left: 65.0%;
+}
+/*西青区*/
+.杨柳青 {
+  position: absolute;
+  top: 60.0%;
+  left: 32.0%;
+}
+/*静海区*/
+.光合谷 {
+  position: absolute;
+  top: 71.0%;
+  left: 38.0%;
+}
+/*福建*/
+/*厦门*/
+.鼓浪屿 {
+  position: absolute;
+  top: 69.5%;
+  left: 47.0%;
+}
+/*南平*/
+.武夷山 {
+  position: absolute;
+  top: 24.0%;
+  left: 42.0%;
+}
+/*泰宁县*/
+.泰宁大金湖 {
+  position: absolute;
+  top: 35.0%;
+  left: 26.0%;
+}
+/*福鼎市*/
+.太姥山 {
+  position: absolute;
+  top: 31.5%;
+  left: 87.0%;
+}
+/*静海区*/
+.永定土楼 {
+  position: absolute;
+  top: 66.0%;
+  left: 22.0%;
+}
+/*海南*/
+/*陵水黎族自治县*/
+.蜈支洲岛 {
+  position: absolute;
+  top: 81.0%;
+  left: 34.0%;
+}
+/*蓟州区*/
+.分界洲岛 {
+  position: absolute;
+  top: 72.0%;
+  left: 45.0%;
+}
+/*天涯区*/
+.天涯海角 {
+  position: absolute;
+  top: 82.0%;
+  left: 23.5%;
+}
+/*崖州区*/
+.南山 {
+  position: absolute;
+  top: 82.5%;
+  left: 19.5%;
+}
+/*保亭黎族苗族自治县*/
+.槟榔谷 {
+  position: absolute;
+  top: 79.0%;
+  left: 30.0%;
+}
 
 .capital {
   display: block
