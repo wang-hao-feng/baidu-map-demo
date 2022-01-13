@@ -547,6 +547,68 @@ total_map {
   top: 79.0%;
   left: 30.0%;
 }
+/*江苏*/
+/*苏州*/
+.吴中太湖 {
+  position: absolute;
+  top: 80.0%;
+  left: 62.0%;
+}
+/*南京*/
+.夫子庙 {
+  position: absolute;
+  top: 67.0%;
+  left: 41.0%;
+}
+/*南京*/
+.中山陵 {
+  position: absolute;
+  top: 67.0%;
+  left: 45.0%;
+}
+/*徐州*/
+.徐州园林 {
+  position: absolute;
+  top: 23.0%;
+  left: 23.0%;
+}
+/*扬州*/
+.扬州瘦西湖 {
+  position: absolute;
+  top: 60.0%;
+  left: 49.0%;
+}
+/*江西*/
+/*上饶*/
+.三清山 {
+  position: absolute;
+  top: 28.0%;
+  left: 92.0%;
+}
+/*九江*/
+.庐山 {
+  position: absolute;
+  top: 16.0%;
+  left: 49.0%;
+}
+/*吉安*/
+.井冈山 {
+  position: absolute;
+  top: 60.0%;
+  left: 14.0%;
+}
+/*贵溪*/
+.龙虎山 {
+  position: absolute;
+  top: 39.0%;
+  left: 67.0%;
+}
+/*南昌*/
+.滕王阁 {
+  position: absolute;
+  top: 29.0%;
+  left: 46.0%;
+}
 
 .capital {
   display: block
