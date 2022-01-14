@@ -19,21 +19,54 @@
 <button class="small button next" id="answer" style="display: none" onClick="Next()">来个答案</button>
 <button class="small button next" id="suggest" style="display: none" onClick="Suggest()">旅行建议</button>
 <button class="small button next" id="new_suggest" style="display: none" onClick="Suggest()">刷新建议</button>
-<script type="text/javascript" src="eel.js"></script>
 <script type="text/javascript">
-	window.addEventListener("load", getText, false);
-	eel.expose(getJSON);
-	var message = '';
-	
-	function getText()
+	window.addEventListener("load", Init, false);
+	url = '180.76.120.243:8080';
+
+	function Init()
 	{
-		Introduce(localStorage.getItem("data"));
-		localStorage.removeItem("data");
+		var location = localStorage.getItem("location")
+
+		var XHR = [
+			function(){return new XMLHttpRequest()},
+			function(){return new ActiveXObject("Msxml2.XMLHTTP")},
+			function(){return new ActiveXObject("Msxml3.XMLHTTP")},
+			function(){return new ActiveXObject("Microsoft.XMLHTTP")}
+		];
+
+		for(var i = 0; i < XHR.length; i++)
+		{
+			try
+			{
+				xhr = XHR[i]();
+			}
+			catch(e)
+			{
+				continue;
+			}
+			break;
+		}
+
+		Introduce(location);
 	}
-	
-	function getJSON(json)
+
+	function Save(key, value)
 	{
-		message = json;
+		if(localStorage.getItem(key) != null)
+			localStorage.removeItem(key);
+		localStorage.setItem(key, value);
+	}
+
+	async function POST(data, fCallBack)
+	{
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState === 4)
+				if(xhr.status == 200)
+					fCallBack(JSON.parse(xhr.responseText))
+		};
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader ('Content-type', 'application/x-www-form-urlencoded');
+		xhr.send(JSON.stringify(data));
 	}
 
 	//true表示显示，false表示不显示
@@ -72,52 +105,83 @@
 			Introduce(location);
 	}
 	
-	async function Introduce(location)
+	function Introduce(location)
 	{
 		var textarea= document.getElementById("textarea");
 		textarea.innerHTML = '正在加载景点介绍...';
 		ChangeButtonDisplay(true, true, false, false, false, false);
-		await eel.Introduce(location)();
-		textarea.innerHTML = message.introduce;
+		Save('location', location);
+		var data = {'method':'Introduce', 'args':{'location':location}};
+		POST(data, IntroduceCallBack);
 	}
 
-	async function NewIntroduce()
+	function IntroduceCallBack(introduce)
 	{
 		var textarea= document.getElementById("textarea");
-		textarea.innerHTML = '正在加载景点介绍...';
-		ChangeButtonDisplay(true, true, false, false, false, false);
-		await eel.NewIntroduce()();
-		textarea.innerHTML = message.introduce;
+		Save('introduce', introduce.introduce);
+		textarea.innerHTML = introduce.introduce;
 	}
 
-	async function BeginTest()
+	function NewIntroduce()
+	{
+		Introduce(localStorage.getItem('location'));
+	}
+
+	function BeginTest()
 	{
 		var textarea = document.getElementById('textarea');
 		textarea.innerHTML = '正在加载试题...';
 		ChangeButtonDisplay(false, false, false, true, false, false);
-		await eel.Cut()();
-		textarea.innerHTML = message.cut;
+		var introduce = localStorage.getItem('introduce');
+		var data = {'method':'BeginTest', 'args':{'introduce':introduce}};
+		POST(data, BeginTestCallBack);
 	}
 
-	async function Next()
+	function BeginTestCallBack(test)
 	{
-		var textarea = document.getElementById('textarea');
-		await eel.Next()();
-		textarea.innerHTML = message.next;
-		if(message.finished)
+		var textarea= document.getElementById("textarea");
+		Save('counter', 0);
+		Save('test', test.test);
+		Save('loc', test.loc);
+		textarea.innerHTML = test.test;
+	}
+
+	function Next()
+	{
+		var introduce = localStorage.getItem('introduce');
+		var counter = localStorage.getItem('counter');
+		var test = localStorage.getItem('test');
+		var loc = localStorage.getItem('loc');
+		var data = {'method':'Next', 'args':{'introduce':introduce, 'counter':counter, 'test':test, 'loc':loc}};
+		POST(data, NextCallBack);
+	}
+
+	function NextCallBack(next)
+	{
+		var textarea= document.getElementById("textarea");
+		Save('counter', next.counter);
+		textarea.innerHTML = next.test
+		if(next.finished)
 			ChangeButtonDisplay(false, false, true, false, true, false);
 	}
 
-	async function Suggest()
+	function Suggest()
 	{
 		var textarea = document.getElementById('textarea');
 		textarea.innerHTML = "正在加载旅行建议...";
 		ChangeButtonDisplay(false, false, false, false, false, true);
-		message = {"suggest":"", "error":true}
-		count = 0;
-		while(message.error)
-			await eel.Suggest()();
-		textarea.innerHTML = message.suggest;
+		var location = localStorage.getItem('location');
+		var data = {'method':'Suggest', 'args':{'location':location}};
+		POST(data, SuggestCallBack);
+	}
+
+	function SuggestCallBack(suggest)
+	{
+		var textarea = document.getElementById('textarea');
+		if(suggest.error)
+			textarea.innerHTML = '旅行建议加载失败，请点击右下方按钮刷新。';
+		else
+			textarea.innerHTML = suggest.suggest;
 	}
 
 </script>
