@@ -210,132 +210,367 @@ total_map {
 /*承德*/
 .承德避暑山庄{
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 27%;
+  left: 67.0%;
 }
 /*秦皇岛*/
 .山海关 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 40.0%;
+  left: 96.0%;
 }
 /*保定*/
 .白石山 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 53.0%;
+  left: 20.0%;
 }
 /*邯郸*/
 .娲皇宫 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 85.0%;
+  left: 5.0%;
 }
 /*石家庄*/
 .西柏坡 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 65.0%;
+  left: 8.0%;
 }
 /*黑龙江*/
 /*大兴安岭*/
 .大兴安岭 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 28.0%;
+  left: 12.0%;
 }
 /*哈尔滨*/
 .冰雪大世界 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 68.5%;
+  left: 35.0%;
 }
 /*漠河*/
 .漠河北极村 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 15.0%;
+  left: 10.0%;
 }
 /*黑河*/
 .五大连池 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 48.5%;
+  left: 32.0%;
 }
 /*牡丹江*/
 .镜泊湖 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 82.0%;
+  left: 54.5%;
 }
 /*内蒙*/
 /*呼伦贝尔*/
 .呼伦贝尔大草原 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 27.1%;
+  left: 71.1%;
 }
 /*兴安盟阿尔山市*/
 .阿尔山 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 43.0%;
+  left: 78.0%;
 }
 /*鄂尔多斯*/
 .成吉思汗陵 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 85.6%;
+  left: 40.67%;
 }
 /*酒泉*/
 .胡杨林 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 61.0%;
+  left: 15.0%;
 }
 /*满洲里*/
 .满洲里中俄边境旅游区 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 26.7%;
+  left: 69.0%;
 }
 /*广东*/
 /*广州*/
 .白云山 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 44.1%;
+  left: 46.2%;
 }
 /*韶关*/
 .丹霞山 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 17.0%;
+  left: 49.7%;
 }
 /*中山*/
 .孙中山故里 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 54.4%;
+  left: 47.5%;
 }
 /*清远*/
 .连州地下河 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 36.3%;
+  left: 44.3%;
 }
 /*惠州*/
 .惠州西湖 {
   position: absolute;
-  top: 50.0%;
-  left: 50.0%;
+  top: 44.2%;
+  left: 58.2%;
 }
+/*北京*/
+/*西城区*/
+.北京故宫 {
+  position: absolute;
+  top: 63.1%;
+  left: 46.2%;
+}
+.明十三陵 {
+  position: absolute;
+  top: 49.1%;
+  left: 38.2%;
+}
+.慕田峪长城{
+  position: absolute;
+  top: 49.1%;
+  left: 40.2%;
+}
+.八达岭长城{
+  position: absolute;
+  top: 42.1%;
+  left: 30.2%;
+}
+.颐和园{
+  position: absolute;
+  top: 62.1%;
+  left: 43.2%;
+}
+/*河南*/
+/*开封市*/
+.清明上河园 {
+  position: absolute;
+  top: 33.1%;
+  left: 57.2%;
+}
+/*洛阳市*/
+.龙门石窟 {
+  position: absolute;
+  top: 38.1%;
+  left: 39.2%;
+}
+/*洛阳市*/
+.老君山 {
+  position: absolute;
+  top: 52.1%;
+  left: 29.2%;
+}
+/*安阳市*/
+.殷墟 {
+  position: absolute;
+  top: 9.1%;
+  left: 59.2%;
+}
+/*平顶山市*/
+.中原大佛{
+  position: absolute;
+  top: 52.1%;
+  left: 40.2%;
+}
+/*浙江*/
+/*杭州*/
+.杭州西湖{
+  position: absolute;
+  top: 25.1%;
+  left: 42.2%;
+}
+/*舟山市*/
+.普陀山{
+  position: absolute;
+  top: 29.1%;
+  left: 73.2%;
+}
+/*台州市*/
+.天台山{
+  position: absolute;
+  top: 49.1%;
+  left: 56.2%;
+}
+/*杭州市*/
+.千岛湖{
+  position: absolute;
+  top: 39.1%;
+  left: 26.2%;
+}
+/*嘉兴市*/
+.乌镇{
+  position: absolute;
+  top: 14.1%;
+  left: 51.2%;
+}
+/*广西*/
+/*桂林市*/
+.桂林山水{
+  position: absolute;
+  top: 24.1%;
+  left: 71.2%;
+}
+/*南宁市*/
+.青秀山{
+  position: absolute;
+  top: 70.1%;
+  left: 45.2%;
+}
+/*贺州市*/
+.黄姚古镇{
+  position: absolute;
+  top: 43.1%;
+  left: 85.2%;
+}
+/*桂林市*/
+.独秀峰{
+  position: absolute;
+  top: 18.1%;
+  left: 72.2%;
+}
+/*崇左市*/
+.德天跨国瀑布{
+  position: absolute;
+  top: 64.1%;
+  left: 34.2%;
+}
+/*安徽*/
+/*黄山市*/
+.黄山{
+  position: absolute;
+  top: 83.1%;
+  left: 69.2%;
+}
+/*合肥市*/
+.三河古镇{
+  position: absolute;
+  top: 58.1%;
+  left: 52.2%;
+}
+/*合肥市*/
+.古徽州{
+  position: absolute;
+  top: 52.1%;
+  left: 48.2%;
+}
+/*阜阳市*/
+.八里河{
+  position: absolute;
+  top: 42.1%;
+  left: 24.2%;
+}
+/*安庆市*/
+.天柱山{
+  position: absolute;
+  top: 70.1%;
+  left: 32.2%;
+}
+/*重庆市*/
+.云阳龙缸{
+  position: absolute;
+  top: 38.1%;
+  left: 67.2%;
+}
+.大足石刻{
+  position: absolute;
+  top: 60.1%;
+  left: 21.2%;
+}
+.巫山小三峡{
+  position: absolute;
+  top: 30.1%;
+  left: 79.2%;
+}
+.濯水古镇{
+  position: absolute;
+  top: 76.1%;
+  left: 68.2%;
+}
+.黑山谷{
+  position: absolute;
+  top: 78.1%;
+  left: 38.2%;
+}
+/*四川省*/
+/*成都市*/
+.都江堰{
+  position: absolute;
+  top: 42.1%;
+  left: 54.2%;
+}
+.九寨沟{
+  position: absolute;
+  top: 15.1%;
+  left: 56.2%;
+}
+.剑门关{
+  position: absolute;
+  top: 23.1%;
+  left: 66.2%;
+}
+.乐山大佛{
+  position: absolute;
+  top: 47.1%;
+  left: 56.2%;
+}
+.峨眉山{
+  position: absolute;
+  top: 57.1%;
+  left: 50.2%;
+}
+/*山东省*/
+/*济南市*/
+.泰山{
+  position: absolute;
+  top: 47.1%;
+  left: 29.2%;
+}
+.台儿庄古城{
+  position: absolute;
+  top: 87.1%;
+  left: 35.2%;
+}
+.威海华夏城{
+  position: absolute;
+  top: 28.1%;
+  left: 88.2%;
+}
+.蓬莱阁{
+  position: absolute;
+  top: 21.1%;
+  left: 73.2%;
+}
+.青州古城{
+  position: absolute;
+  top: 37.1%;
+  left: 46.2%;
+}
+
+
+
+
 
 .capital {
   display: block
 }
 .attraction {
-  display: none;
+  display: block;
 }
 .place:hover {
   transform: scale(2, 2);
@@ -348,9 +583,9 @@ total_map {
   border-radius: 100px;
 }
 .title {
-    font-size: 100%;
     text-shadow: 0px 0px #FFFFFF;
-    color: #000000;
+    color: #0075FA;
+    font-size: 45px;
 }
 .centered {
   margin: 50px auto;

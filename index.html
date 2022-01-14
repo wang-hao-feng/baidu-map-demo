@@ -13,71 +13,119 @@
   <input name="search" type="search" class="search_bar" id="search">
   <button name="submit" type="submit" class="small button" id="submit" onClick="Search()" >搜索</button>
 </header>
-<div class="map"> <img src="images/map/中国地图.png" alt="" width="100%" id="map" value="中国地图"/>
+<div class="map"> <img src="images/map/province/ShanDong.JPG" alt="" width="100%" id="map" value="中国地图"/>
   <div> 
     <!--东北地区-->
-    <input type="image" src="images/位置.png" class="place capital 黑龙江省" value = "黑龙江省" onClick="Capital('黑龙江省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 吉林省" value = "吉林省" onClick="Capital('吉林省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 辽宁省" value = "辽宁省" onClick="Capital('辽宁省')" style="display: block">
+    <input type="image" src="images/place.png" class="place capital 黑龙江省" value = "黑龙江省" onClick="Capital('HeiLongJiang')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 吉林省" value = "吉林省" onClick="Capital('JiLin')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 辽宁省" value = "辽宁省" onClick="Capital('LiaoNing')" style="display: none">
     <!--华北地区-->
-    <input type="image" src="images/位置.png" class="place capital 北京市" value = "北京市" onClick="Capital('北京市')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 河北省" value = "河北省" onClick="Capital('河北省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 内蒙古自治区" value = "内蒙古自治区" onClick="Capital('内蒙古自治区')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 山西省" value = "山西省" onClick="Capital('山西省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 天津市" value = "天津市" onClick="Capital('天津市')" style="display: block">
+    <input type="image" src="images/place.png" class="place capital 北京市" value = "北京市" onClick="Capital('BeiJing')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 河北省" value = "河北省" onClick="Capital('HeBei')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 内蒙古自治区" value = "内蒙古自治区" onClick="Capital('NeiMengGu')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 山西省" value = "山西省" onClick="Capital('ShanXi')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 天津市" value = "天津市" onClick="Capital('TianJin')" style="display: none">
     <!--华东地区-->
-    <input type="image" src="images/位置.png" class="place capital 安徽省" value = "安徽省" onClick="Capital('安徽省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 福建省" value = "福建省" onClick="Capital('福建省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 江苏省" value = "江苏省" onClick="Capital('江苏省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 江西省" value = "江西省" onClick="Capital('江西省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 山东省" value = "山东省" onClick="Capital('山东省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 上海市" value = "上海市" onClick="Capital('上海市')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 浙江省" value = "浙江省" onClick="Capital('浙江省')" style="display: block">
+    <input type="image" src="images/place.png" class="place capital 安徽省" value = "安徽省" onClick="Capital('AnHui')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 福建省" value = "福建省" onClick="Capital('FuJian')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 江苏省" value = "江苏省" onClick="Capital('JiangSu')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 江西省" value = "江西省" onClick="Capital('JiangXi')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 山东省" value = "山东省" onClick="Capital('ShanDong')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 上海市" value = "上海市" onClick="Capital('ShangHai')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 浙江省" value = "浙江省" onClick="Capital('ZheJiang')" style="display: none">
     <!--华南地区-->
-    <input type="image" src="images/位置.png" class="place capital 广东省" value = "广东省" onClick="Capital('广东省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 广西壮族自治区" value = "广西壮族自治区" onClick="Capital('广西壮族自治区')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 海南省" value = "海南省" onClick="Capital('海南省')" style="display: block">
+    <input type="image" src="images/place.png" class="place capital 广东省" value = "广东省" onClick="Capital('GuangDong')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 广西壮族自治区" value = "广西壮族自治区" onClick="Capital('GuangXi')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 海南省" value = "海南省" onClick="Capital('HaiNan')" style="display: none">
     <!--华中地区-->
-    <input type="image" src="images/位置.png" class="place capital 河南省" value = "河南省" onClick="Capital('河南省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 湖南省" value = "湖南省" onClick="Capital('湖南省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 湖北省" value = "湖北省" onClick="Capital('湖北省')" style="display: block">
+    <input type="image" src="images/place.png" class="place capital 河南省" value = "河南省" onClick="Capital('HeNan')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 湖南省" value = "湖南省" onClick="Capital('HuNan')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 湖北省" value = "湖北省" onClick="Capital('HuBei')" style="display: none">
     <!--西北地区-->
-    <input type="image" src="images/位置.png" class="place capital 新疆维吾尔自治区" value = "新疆维吾尔自治区" onClick="Capital('新疆维吾尔自治区')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 甘肃省" value = "甘肃省" onClick="Capital('甘肃省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 宁夏回族自治区" value = "宁夏回族自治区" onClick="Capital('宁夏回族自治区')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 青海省" value = "青海省" onClick="Capital('青海省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 陕西省" value = "陕西省" onClick="Capital('陕西省')" style="display: block">
+    <input type="image" src="images/place.png" class="place capital 新疆维吾尔自治区" value = "新疆维吾尔自治区" onClick="Capital('XinJiang')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 甘肃省" value = "甘肃省" onClick="Capital('GanSu')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 宁夏回族自治区" value = "宁夏回族自治区" onClick="Capital('NingXia')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 青海省" value = "青海省" onClick="Capital('QingHai')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 陕西省" value = "陕西省" onClick="Capital('ShaanXi')" style="display: none">
     <!--西南地区-->
-    <input type="image" src="images/位置.png" class="place capital 贵州省" value = "贵州省" onClick="Capital('贵州省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 四川省" value = "四川省" onClick="Capital('四川省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 西藏自治区" value = "西藏自治区" onClick="Capital('西藏自治区')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 云南省" value = "云南省" onClick="Capital('云南省')" style="display: block">
-    <input type="image" src="images/位置.png" class="place capital 重庆市" value = "重庆市" onClick="Capital('重庆市')" style="display: block">
+    <input type="image" src="images/place.png" class="place capital 贵州省" value = "贵州省" onClick="Capital('GuiZhou')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 四川省" value = "四川省" onClick="Capital('SiChuan')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 西藏自治区" value = "西藏自治区" onClick="Capital('XiZang')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 云南省" value = "云南省" onClick="Capital('YunNan')" style="display: none">
+    <input type="image" src="images/place.png" class="place capital 重庆市" value = "重庆市" onClick="Capital('ChongQing')" style="display: none">
     
     <!--河北-->
-    <input type="image" src="images/位置.png" class="place attraction 承德避暑山庄" onClick="Introduce('承德避暑山庄')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 山海关" onClick="Introduce('山海关')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 白石山" onClick="Introduce('白石山')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 娲皇宫"  onClick="Introduce('娲皇宫')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 西柏坡"  onClick="Introduce('西柏坡')" style="display: none">
+    <input type="image" src="images/place.png" name="河北省" class="place attraction 承德避暑山庄" onClick="Introduce('承德避暑山庄')" style="display: none">
+    <input type="image" src="images/place.png" name="河北省" class="place attraction 山海关" onClick="Introduce('山海关')" style="display: none">
+    <input type="image" src="images/place.png" name="河北省" class="place attraction 白石山" onClick="Introduce('白石山')" style="display: none">
+    <input type="image" src="images/place.png" name="河北省" class="place attraction 娲皇宫"  onClick="Introduce('娲皇宫')" style="display: none">
+    <input type="image" src="images/place.png" name="河北省" class="place attraction 西柏坡"  onClick="Introduce('西柏坡')" style="display: none">
     <!--黑龙江--> 
-    <input type="image" src="images/位置.png" class="place attraction 大兴安岭"  onClick="Introduce('大兴安岭')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 冰雪大世界"  onClick="Introduce('冰雪大世界')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 漠河北极村"  onClick="Introduce('漠河北极村')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 五大连池"  onClick="Introduce('五大连池')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 镜泊湖"  onClick="Introduce('镜泊湖')" style="display: none">
+    <input type="image" src="images/place.png" name="黑龙江省" class="place attraction 大兴安岭"  onClick="Introduce('大兴安岭')" style="display: none">
+    <input type="image" src="images/place.png" name="黑龙江省" class="place attraction 冰雪大世界"  onClick="Introduce('冰雪大世界')" style="display: none">
+    <input type="image" src="images/place.png" name="黑龙江省" class="place attraction 漠河北极村"  onClick="Introduce('漠河北极村')" style="display: none">
+    <input type="image" src="images/place.png" name="黑龙江省" class="place attraction 五大连池"  onClick="Introduce('五大连池')" style="display: none">
+    <input type="image" src="images/place.png" name="黑龙江省" class="place attraction 镜泊湖"  onClick="Introduce('镜泊湖')" style="display: none">
     <!--内蒙-->  
-    <input type="image" src="images/位置.png" class="place attraction 呼伦贝尔大草原"  onClick="Introduce('呼伦贝尔大草原')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 阿尔山"  onClick="Introduce('阿尔山')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 成吉思汗陵"  onClick="Introduce('成吉思汗陵')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 胡杨林"  onClick="Introduce('胡杨林')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 满洲里中俄边境旅游区"  onClick="Introduce('满洲里中俄边境旅游区')" style="display: none">
+    <input type="image" src="images/place.png" name="内蒙古自治区" class="place attraction 呼伦贝尔大草原"  onClick="Introduce('呼伦贝尔大草原')" style="display: none">
+    <input type="image" src="images/place.png" name="内蒙古自治区" class="place attraction 阿尔山"  onClick="Introduce('阿尔山')" style="display: none">
+    <input type="image" src="images/place.png" name="内蒙古自治区" class="place attraction 成吉思汗陵"  onClick="Introduce('成吉思汗陵')" style="display: none">
+    <input type="image" src="images/place.png" name="内蒙古自治区" class="place attraction 胡杨林"  onClick="Introduce('胡杨林')" style="display: none">
+    <input type="image" src="images/place.png" name="内蒙古自治区" class="place attraction 满洲里中俄边境旅游区"  onClick="Introduce('满洲里中俄边境旅游区')" style="display: none">
     <!--广东--> 
-    <input type="image" src="images/位置.png" class="place attraction 白云山"  onClick="Introduce('白云山')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 丹霞山"  onClick="Introduce('丹霞山')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 孙中山故里"  onClick="Introduce('孙中山故里')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 连州地下河"  onClick="Introduce('连州地下河')" style="display: none">
-    <input type="image" src="images/位置.png" class="place attraction 惠州西湖"  onClick="Introduce('惠州西湖')" style="display: none">
+    <input type="image" src="images/place.png" name="广东省" class="place attraction 白云山"  onClick="Introduce('白云山')" style="display: none">
+    <input type="image" src="images/place.png" name="广东省" class="place attraction 丹霞山"  onClick="Introduce('丹霞山')" style="display: none">
+    <input type="image" src="images/place.png" name="广东省" class="place attraction 孙中山故里"  onClick="Introduce('孙中山故里')" style="display: none">
+    <input type="image" src="images/place.png" name="广东省" class="place attraction 连州地下河"  onClick="Introduce('连州地下河')" style="display: none">
+    <input type="image" src="images/place.png" name="广东省" class="place attraction 惠州西湖"  onClick="Introduce('惠州西湖')" style="display: none">
+	<!--北京--> 
+    <input type="image" src="images/place.png" name="北京市" class="place attraction 北京故宫"  onClick="Introduce('北京故宫')" style="display: none">
+    <input type="image" src="images/place.png" name="北京市" class="place attraction 明十三陵"  onClick="Introduce('明十三陵')" style="display: none">
+    <input type="image" src="images/place.png" name="北京市" class="place attraction 慕田峪长城"  onClick="Introduce('慕田峪长城')" style="display: none">
+    <input type="image" src="images/place.png" name="北京市" class="place attraction 八达岭长城"  onClick="Introduce('八达岭长城')" style="display: none">
+    <input type="image" src="images/place.png" name="北京市" class="place attraction 颐和园"  onClick="Introduce('颐和园')" style="display: none">
+	<!--河南--> 
+    <input type="image" src="images/place.png" name="河南省" class="place attraction 清明上河园"  onClick="Introduce('清明上河园')" style="display: none">
+    <input type="image" src="images/place.png" name="河南省" class="place attraction 龙门石窟"  onClick="Introduce('龙门石窟')" style="display: none">
+    <input type="image" src="images/place.png" name="河南省" class="place attraction 老君山"  onClick="Introduce('老君山')" style="display: none">
+    <input type="image" src="images/place.png" name="河南省" class="place attraction 殷墟"  onClick="Introduce('殷墟')" style="display: none">
+    <input type="image" src="images/place.png" name="河南省" class="place attraction 中原大佛"  onClick="Introduce('中原大佛')" style="display: none">
+	<!--浙江--> 
+    <input type="image" src="images/place.png" name="浙江省" class="place attraction 杭州西湖"  onClick="Introduce('杭州西湖')" style="display: none">
+    <input type="image" src="images/place.png" name="浙江省" class="place attraction 普陀山"  onClick="Introduce('普陀山')" style="display: none">
+    <input type="image" src="images/place.png" name="浙江省" class="place attraction 天台山"  onClick="Introduce('天台山')" style="display: none">
+    <input type="image" src="images/place.png" name="浙江省" class="place attraction 千岛湖"  onClick="Introduce('千岛湖')" style="display: none">
+    <input type="image" src="images/place.png" name="浙江省" class="place attraction 乌镇"  onClick="Introduce('乌镇')" style="display: none">
+	<!--广西--> 
+    <input type="image" src="images/place.png" name="广西壮族自治区" class="place attraction 桂林山水"  onClick="Introduce('桂林山水')" style="display: none">
+    <input type="image" src="images/place.png" name="广西壮族自治区" class="place attraction 青秀山"  onClick="Introduce('青秀山')" style="display: none">
+    <input type="image" src="images/place.png" name="广西壮族自治区" class="place attraction 黄姚古镇"  onClick="Introduce('黄姚古镇')" style="display: none">
+    <input type="image" src="images/place.png" name="广西壮族自治区" class="place attraction 独秀峰"  onClick="Introduce('独秀峰')" style="display: none">
+    <input type="image" src="images/place.png" name="广西壮族自治区" class="place attraction 德天跨国瀑布"  onClick="Introduce('德天跨国瀑布')" style="display: none">
+	<!--安徽--> 
+    <input type="image" src="images/place.png" name="安徽省" class="place attraction 黄山"  onClick="Introduce('黄山')" style="display: none">
+    <input type="image" src="images/place.png" name="安徽省" class="place attraction 三河古镇"  onClick="Introduce('三河古镇')" style="display: none">
+    <input type="image" src="images/place.png" name="安徽省" class="place attraction 古徽州"  onClick="Introduce('古徽州')" style="display: none">
+    <input type="image" src="images/place.png" name="安徽省" class="place attraction 八里河"  onClick="Introduce('八里河')" style="display: none">
+    <input type="image" src="images/place.png" name="安徽省" class="place attraction 天柱山"  onClick="Introduce('天柱山')" style="display: none">
+	<!--重庆--> 
+    <input type="image" src="images/place.png" name="重庆市" class="place attraction 云阳龙缸"  onClick="Introduce('云阳龙缸')" style="display: none">
+    <input type="image" src="images/place.png" name="重庆市" class="place attraction 大足石刻"  onClick="Introduce('大足石刻')" style="display: none">
+    <input type="image" src="images/place.png" name="重庆市" class="place attraction 巫山小三峡"  onClick="Introduce('巫山小三峡')" style="display: none">
+    <input type="image" src="images/place.png" name="重庆市" class="place attraction 濯水古镇"  onClick="Introduce('濯水古镇')" style="display: none">
+    <input type="image" src="images/place.png" name="重庆市" class="place attraction 黑山谷"  onClick="Introduce('黑山谷')" style="display: none">
+	<!--四川--> 
+    <input type="image" src="images/place.png" name="四川省" class="place attraction 都江堰"  onClick="Introduce('都江堰')" style="display: none">
+    <input type="image" src="images/place.png" name="四川省" class="place attraction 九寨沟"  onClick="Introduce('九寨沟')" style="display: none">
+    <input type="image" src="images/place.png" name="四川省" class="place attraction 剑门关"  onClick="Introduce('剑门关')" style="display: none">
+    <input type="image" src="images/place.png" name="四川省" class="place attraction 乐山大佛"  onClick="Introduce('乐山大佛')" style="display: none">
+    <input type="image" src="images/place.png" name="四川省" class="place attraction 峨眉山"  onClick="Introduce('峨眉山')" style="display: none">
+	 <!--山东--> 
+    <input type="image" src="images/place.png" name="山东省" class="place attraction 泰山"  onClick="Introduce('泰山')" style="display: block">
+    <input type="image" src="images/place.png" name="山东省" class="place attraction 台儿庄古城"  onClick="Introduce('台儿庄古城')" style="display: block">
+    <input type="image" src="images/place.png" name="山东省" class="place attraction 威海华夏城"  onClick="Introduce('威海华夏城')" style="display: block">
+    <input type="image" src="images/place.png" name="山东省" class="place attraction 蓬莱阁"  onClick="Introduce('蓬莱阁')" style="display: block">
+    <input type="image" src="images/place.png" name="山东省" class="place attraction 青州古城"  onClick="Introduce('青州古城')" style="display: block">
   </div>
 </div>
 <script type="text/javascript">
@@ -86,7 +134,7 @@
 	{
 		for (let button of document.getElementsByClassName('capital'))
 			button.style.display = button.style.display == 'block' ? 'none' : 'block';
-		for (let button of document.getElementsByClassName(v))
+		for (let button of document.getElementsByName(v))
 		{
 			if (button.className.indexOf('capital') != -1)
 				continue;
@@ -128,7 +176,7 @@
 	{
 		var map = document.getElementById('map');
 		fadeOut(map, 500);
-		map.src = "images/map/中国地图.png";
+		map.src = "images/map/Chinese.png";
 		fadeIn(map, 500);
 		Exchange(map.value);
 		var back = document.getElementById('reset');
@@ -156,7 +204,7 @@
 	
 	function Search()
 	{
-		location = document.getElementById('search').value;
+		var location = document.getElementById('search').value;
 		if(location == "")
 			alert("输入不能为空")
 		else
