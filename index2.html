@@ -118,8 +118,16 @@
 	function IntroduceCallBack(introduce)
 	{
 		var textarea= document.getElementById("textarea");
-		Save('introduce', introduce.introduce);
-		textarea.innerHTML = introduce.introduce;
+		if(introduce.error != 0)
+		{
+			textarea.innerHTML = '景点介绍加载失败，请点击右下方按钮刷新。\n错误代码为：' + introduce.error;
+			ChangeButtonDisplay(true, false, false, false, false, false);
+		}
+		else
+		{
+			Save('introduce', introduce.introduce);
+			textarea.innerHTML = introduce.introduce;
+		}
 	}
 
 	function NewIntroduce()
@@ -178,8 +186,8 @@
 	function SuggestCallBack(suggest)
 	{
 		var textarea = document.getElementById('textarea');
-		if(suggest.error)
-			textarea.innerHTML = '旅行建议加载失败，请点击右下方按钮刷新。';
+		if(suggest.error != 0)
+			textarea.innerHTML = '旅行建议加载失败，请点击右下方按钮刷新。\n错误代码为：' + suggest.error;
 		else
 			textarea.innerHTML = suggest.suggest;
 	}

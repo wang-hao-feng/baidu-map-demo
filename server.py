@@ -42,10 +42,15 @@ class API():
                                'max_gen_len': 128
                            })
 
-        content = json.loads(response)['result']['content']
-        result_content = self.cut(content)
+        err = 0
+        if 'result' in json.loads(response):
+            content = json.loads(response)['result']['content']
+            result_content = self.cut(content)
+        else:
+            result_content = ''
+            err = json.loads(response)['error_code']
 
-        return {'introduce':result_content}
+        return {'introduce':result_content, 'error':err}
     
     def BeginTest(self, introduce):
         test = '填空：'
@@ -93,13 +98,13 @@ class API():
                                'max_gen_len': 128
                            })
 
-        err = False
+        err = 0
         if "result" in json.loads(response):
             content = json.loads(response)['result']['content']
             result_content = self.cut(content)
         else:
             result_content = ""
-            err = json.loads(response)['error_code'] != 0
+            err = json.loads(response)['error_code']
         return {"suggest":result_content,"error":err}
 
     def fetch_token(self):
