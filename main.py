@@ -106,6 +106,10 @@ class API():
             err = json.loads(response)['error_code'] != 0
         return {"suggest":result_content,"error":err}
 
+    def Text2Image(self, location:str):
+        time.sleep(2)
+        return {}
+
     def fetch_token(self):
         params = {'grant_type': 'client_credentials',
                   'client_id': API_KEY,
@@ -178,6 +182,11 @@ def Next():
 def Suggest():
     suggest = api.Suggest()
     eel.getJSON({"suggest":suggest['suggest'], 'error':suggest['error']})
+
+@eel.expose
+def Text2Image(location):
+    image_url = api.Text2Image(location)
+    eel.getJSON({'image_url':image_url})
 
 if __name__ == "__main__":
     api = API()
