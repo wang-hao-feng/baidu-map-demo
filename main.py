@@ -13,10 +13,11 @@ from urllib.parse import quote_plus
 from LAC import LAC
 
 ssl._create_default_https_context = ssl._create_unverified_context
-API_KEY = 'NSUVdo3wzXSOUfGammwAaXzy'
-SECRET_KEY = 'UMC3KS7x3SMkYP09LTiPUXcVXyEav7i2'
-EASYDL_TEXT_CLASSIFY_URL_1 = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/intros_gen"
-EASYDL_TEXT_CLASSIFY_URL_2 = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/tripSug"
+API_KEY = '9GtCALtidmTe1ryMkXeInfHZ'
+SECRET_KEY = 'eg3l1raYvtqsoo1qNTsDGvFV3eRskGGS'
+INTRODUCTION_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/Introduction"
+SUGGEST_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/Travel_tips"
+BACKGROUND_URL = 'https://wenxin.baidu.com/younger/portal/api/rest/1.0/ernievilg/v1/txt2img'
 TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
 PUNCTUATION_LIST = [ '.', '。', '?', '？', '!', ';', '；']
 HOLE_LABEL_LIST = ['PER', 'LOC', 'ORG', 'TIME', 'nz', 'nw']
@@ -36,7 +37,7 @@ class API():
         token = self.fetch_token()
 
         # 拼接url
-        url = EASYDL_TEXT_CLASSIFY_URL_1 + "?access_token=" + token
+        url = INTRODUCTION_URL + "?access_token=" + token
         text = '地点：' + location +' 介绍：'
 
         # 请求接口
@@ -85,7 +86,7 @@ class API():
         token = self.fetch_token()
 
         # 拼接url
-        url = EASYDL_TEXT_CLASSIFY_URL_2 + "?access_token=" + token
+        url = SUGGEST_URL + "?access_token=" + token
         text = '问题：去' + self.location +'旅行有什么建议 回答：'
 
         # 请求接口
