@@ -43,6 +43,7 @@
 			var local = localStorage.getItem("data");
 			localStorage.removeItem("data");
 			Text2Image(local);
+			/* $(".loading").hide() */
 			Introduce(local);
 		}
 
@@ -82,6 +83,7 @@
 			else
 			{
 				Text2Image(location);
+				/* $(".loading").hide() */
 				Introduce(location);
 			}
 		}
@@ -91,7 +93,15 @@
 			textarea.innerHTML = '正在加载景点介绍...';
 			ChangeButtonDisplay(true, true, false, false, false, false);
 			await eel.Introduce(location)();
-			textarea.innerHTML = message.introduce;
+			if(message.error != 0)
+			{
+				textarea.innerHTML = '景点介绍加载失败，请点击右下方按钮刷新。\n错误代码为：' + message.error;
+				ChangeButtonDisplay(true, false, false, false, false, false);
+			}
+			else
+			{
+				textarea.innerHTML = message.introduce;
+			}
 		}
 
 		async function NewIntroduce() {

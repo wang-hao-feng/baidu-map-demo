@@ -11,17 +11,17 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 VILG_TOKEN_URL = 'https://wenxin.baidu.com/younger/portal/api/oauth/token'
 EASYDL_TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
+
+INTRODUCTION_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/intros_gen"
 SUGGEST_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/Travel_tips"
 VILG_URL = 'https://wenxin.baidu.com/younger/portal/api/rest/1.0/ernievilg/v1/txt2img'
 BACKGROUND_URL = 'https://wenxin.baidu.com/younger/portal/api/rest/1.0/ernievilg/v1/getImg'
-
-INTRODUCTION_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/Introduction"
 
 PUNCTUATION = set([ '.', '。', '?', '？', '!', ';', '；'])
 HOLE_LABEL = ['PER', 'LOC', 'ORG', 'TIME', 'nz', 'nw']
 
 class ERNIE_API():
-    def __init__(self, easydl_key:dict, vilg_key:dict):
+    def __init__(self, keys:dict):
         self.location = None
         self.introduce = None
         self.holeLoc = []
@@ -30,8 +30,9 @@ class ERNIE_API():
         self.lac = LAC(mode = 'lac')
         self.http = PoolManager()
 
-        self.easydl_token = self.__fetch_token(easydl_key, token_kind='EASYDL')
-        self.vilg_token = self.__fetch_token(vilg_key, token_kind='VILG')
+        self.introduce_token = self.__fetch_token(keys['introduce_key'], token_kind='EASYDL')
+        self.suggest_token = self.__fetch_token(keys['suggest_key'], token_kind='EASYDL')
+        self.vilg_token = self.__fetch_token(keys['vilg_key'], token_kind='VILG')
     
     def __request(self, url:str, data:dict):
         data = urlencode(data) if url == EASYDL_TOKEN_URL or url == VILG_TOKEN_URL else json.dumps(data)
@@ -68,7 +69,7 @@ class ERNIE_API():
     def Introduce(self, location:str) -> str:
         self.location = location
 
-        url = INTRODUCTION_URL + '?access_token=' + self.easydl_token
+        url = INTRODUCTION_URL + '?access_token=' + self.introduce_token
         data = {
             'text': '地点：' + location + ' 介绍：',
             'max_gen_len': 128
@@ -76,11 +77,16 @@ class ERNIE_API():
 
         response = self.__request(url, data)
 
-        content = json.loads(response)['result']['content']
-        result_content = self.__cut(content)
+        err = 0
+        if 'result' in json.loads(response):
+            content = json.loads(response)['result']['content']
+            result_content = self.__cut(content)
+        else:
+            result_content = ''
+            err = json.loads(response)['error_code']
         self.introduce = result_content
 
-        return result_content
+        return {'introduce':result_content, 'error':err}
     
     def Cut(self):
         self.counter = 0
@@ -110,7 +116,7 @@ class ERNIE_API():
         return False
 
     def Suggest(self) -> str:
-        url = SUGGEST_URL + '?access_token=' + self.easydl_token
+        url = SUGGEST_URL + '?access_token=' + self.suggest_token
         data = {
             'text': '问题：去' + self.location +'旅行有什么建议 回答：',
             'max_gen_len': 128
@@ -146,8 +152,8 @@ class ERNIE_API():
             }
 
             response = json.loads(self.http.request('POST', BACKGROUND_URL, data).data)
-            print(response)
+            #print(response)
             if response['data']['img'] != '':
                 return response['data']['img']
             else:
-                sleep(10)
+                sleep(30)
