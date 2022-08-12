@@ -43,7 +43,7 @@
 			var local = localStorage.getItem("data");
 			localStorage.removeItem("data");
 			Text2Image(local);
-			/* Introduce(local); */
+			Introduce(local);
 		}
 
 		function getJSON(json) {
@@ -80,7 +80,10 @@
 			if (location == "")
 				alert("输入不能为空")
 			else
+			{
+				Text2Image(location);
 				Introduce(location);
+			}
 		}
 
 		async function Introduce(location) {
@@ -127,7 +130,9 @@
 		}
 
 		async function Text2Image(location) {
+			$(".loading").show();
 			await eel.Text2Image(location)();
+			$("body").css("background-image", message.image_url)
 			$(".loading").hide();
 		}
 

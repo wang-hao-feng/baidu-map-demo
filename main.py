@@ -1,160 +1,19 @@
-import eel
 import os
-import time
-import sys
-import json
+import eel
 import ssl
+from ERNIE_API import ERNIE_API
 
-from urllib.request import urlopen
-from urllib.request import Request
-from urllib.error import URLError
-from urllib.parse import urlencode
-from urllib.parse import quote_plus
-from LAC import LAC
+ssl._create_default_https_context = ssl._create_unverified_context  
 
-ssl._create_default_https_context = ssl._create_unverified_context
-API_KEY = '9GtCALtidmTe1ryMkXeInfHZ'
-SECRET_KEY = 'eg3l1raYvtqsoo1qNTsDGvFV3eRskGGS'
-INTRODUCTION_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/Introduction"
-SUGGEST_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/Travel_tips"
-BACKGROUND_URL = 'https://wenxin.baidu.com/younger/portal/api/rest/1.0/ernievilg/v1/txt2img'
-TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
-PUNCTUATION_LIST = [ '.', '。', '?', '？', '!', ';', '；']
-HOLE_LABEL_LIST = ['PER', 'LOC', 'ORG', 'TIME', 'nz', 'nw']
-
-class API():
-    def __init__(self):
-        self.location = None
-        self.introduce = None
-        self.holeLoc = []
-        self.holeResult = '填空：' #填空文本以及出现填空的文本
-        self.counter = 0
-        self.lac = LAC(mode = 'lac')
-    
-    def Introduce(self, location):
-        self.location = location
-        # 获取access token
-        token = self.fetch_token()
-
-        # 拼接url
-        url = INTRODUCTION_URL + "?access_token=" + token
-        text = '地点：' + location +' 介绍：'
-
-        # 请求接口
-        # 测试
-        response = self.request(url,
-                           {
-                               'text': text,
-                               'max_gen_len': 128
-                           })
-
-        content = json.loads(response)['result']['content']
-        result_content = self.cut(content)
-        self.introduce = result_content
-
-        return result_content
-    
-    def Cut(self):
-        self.counter = 0
-        self.holeResult = '填空：'
-        self.holeLoc = []
-        lac_result = self.lac.run(self.introduce)
-        i,sumLength = 0,0
-        for label in lac_result[1]:
-            length = len(lac_result[0][i])
-            if label in HOLE_LABEL_LIST:
-                self.holeResult = self.holeResult + '__' * (length + 1)
-                self.holeLoc.append([sumLength, sumLength + length])
-            else:
-                self.holeResult = self.holeResult + lac_result[0][i]
-            sumLength += length
-            i += 1
-    
-    def Next(self):
-        x = self.holeLoc[self.counter][0]
-        y = self.holeLoc[self.counter][1]
-        self.holeResult = self.holeResult[:x + 4 + 2 * self.counter] + self.introduce[x:y] + self.holeResult[x + 4 + 2 * (y - x + self.counter):]
-        self.counter += 1
-        if self.counter >= len(self.holeLoc):
-            return True
-        return False
-    
-    #根据列表和计数器挖空
-    
-    def Suggest(self):
-        # 获取access token
-        token = self.fetch_token()
-
-        # 拼接url
-        url = SUGGEST_URL + "?access_token=" + token
-        text = '问题：去' + self.location +'旅行有什么建议 回答：'
-
-        # 请求接口
-        # 测试
-        response = self.request(url,
-                           {
-                               'text': text,
-                               'max_gen_len': 128
-                           })
-
-        err = False
-        if "result" in json.loads(response):
-            content = json.loads(response)['result']['content']
-            result_content = self.cut(content)
-        else:
-            result_content = ""
-            err = json.loads(response)['error_code'] != 0
-        return {"suggest":result_content,"error":err}
-
-    def Text2Image(self, location:str):
-        time.sleep(2)
-        return {}
-
-    def fetch_token(self):
-        params = {'grant_type': 'client_credentials',
-                  'client_id': API_KEY,
-                  'client_secret': SECRET_KEY}
-        post_data = urlencode(params)
-        post_data = post_data.encode('utf-8')
-        req = Request(TOKEN_URL, post_data)
-        try:
-            f = urlopen(req, timeout=5)
-            result_str = f.read()
-        except URLError as err:
-            print(err)
-        result_str = result_str.decode()
-
-        result = json.loads(result_str)
-
-        if ('access_token' in result.keys() and 'scope' in result.keys()):
-            if not 'brain_all_scope' in result['scope'].split(' '):
-                print('please ensure has check the  ability')
-                exit()
-            return result['access_token']
-        else:
-            print('please overwrite the correct API_KEY and SECRET_KEY')
-            exit()
-
-    def request(self, url, data):
-        req =Request(url, json.dumps(data).encode('utf-8'))
-
-        has_error = False
-        try:
-            f = urlopen(req)
-            result_str = f.read()
-            result_str = result_str.decode()
-            return result_str
-        except URLError as err:
-            print(err)
-
-    def cut(self, content):
-        length = len(content)
-        count = 0
-        for i in range(length):
-            if content[i] in PUNCTUATION_LIST:
-                count = i
-        result_content = content[:count+1]
-        return result_content
+#KEY
+EASYDL_KEY = {
+    'API_KEY':'9GtCALtidmTe1ryMkXeInfHZ', 
+    'SECRET_KEY':'eg3l1raYvtqsoo1qNTsDGvFV3eRskGGS'
+}
+VILG_KEY = {
+    'API_KEY':'GKN0nu7vzKhAii9VDQI8vUiUAC0ElO4W', 
+    'SECRET_KEY':'XR8Zia0YLTQcBSYqHD00kNTUyjoWtGdr'
+}
 
 api = None
 
@@ -186,9 +45,9 @@ def Suggest():
 @eel.expose
 def Text2Image(location):
     image_url = api.Text2Image(location)
-    eel.getJSON({'image_url':image_url})
+    eel.getJSON({'image_url':"url(" + image_url + ")"})
 
 if __name__ == "__main__":
-    api = API()
+    api = ERNIE_API(EASYDL_KEY, VILG_KEY)
     eel.init(os.getcwd())
     eel.start("index.html", mode="edge")
