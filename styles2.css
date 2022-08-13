@@ -147,7 +147,8 @@ body {
 
 .textarea_background {
   background-repeat: no-repeat;
-  background-image: url(images/textarea_background.jpg);
+  /* background-image: url(images/textarea_background.jpg); */
+  background-image: url(images/textarea_background.png);
   background-size: 100% 100%;
   float: none;
   width: 60%;
