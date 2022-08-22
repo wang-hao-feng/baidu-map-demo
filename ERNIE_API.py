@@ -138,10 +138,11 @@ class ERNIE_API():
         data = {
             'access_token': self.vilg_token,
             'text': location,
-            'style': '中国画'
+            'style': '水彩'
         }
 
         response = self.http.request('POST', VILG_URL, data, timeout=30)
+        print(json.loads(response.data)['msg'])
         taskId = json.loads(response.data)['data']['taskId']
 
         #等待请求结果
