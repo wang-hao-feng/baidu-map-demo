@@ -13,7 +13,8 @@ VILG_TOKEN_URL = 'https://wenxin.baidu.com/younger/portal/api/oauth/token'
 EASYDL_TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
 
 INTRODUCTION_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/intros_gen"
-SUGGEST_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/Travel_tips"
+SUGGEST_URL = 'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/tripSug'
+""" SUGGEST_URL = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_gen/Travel_tips" """
 VILG_URL = 'https://wenxin.baidu.com/younger/portal/api/rest/1.0/ernievilg/v1/txt2img'
 BACKGROUND_URL = 'https://wenxin.baidu.com/younger/portal/api/rest/1.0/ernievilg/v1/getImg'
 

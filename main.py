@@ -12,9 +12,11 @@ KEYS = {
         'SECRET_KEY':'30K9GYZpDwMSE4Vm0uPPBW9deUNrcDGU'
     },
     'suggest_key':{
-        'API_KEY':'9GtCALtidmTe1ryMkXeInfHZ', 
-        'SECRET_KEY':'eg3l1raYvtqsoo1qNTsDGvFV3eRskGGS'
-    },
+        #'API_KEY':'9GtCALtidmTe1ryMkXeInfHZ', 
+        #'SECRET_KEY':'eg3l1raYvtqsoo1qNTsDGvFV3eRskGGS'
+        'API_KEY':'X6CNT7VlkVOWQA5KvOld1GN7', 
+        'SECRET_KEY':'30K9GYZpDwMSE4Vm0uPPBW9deUNrcDGU'
+    }, 
     'vilg_key':{
         'API_KEY':'GKN0nu7vzKhAii9VDQI8vUiUAC0ElO4W', 
         'SECRET_KEY':'XR8Zia0YLTQcBSYqHD00kNTUyjoWtGdr'
