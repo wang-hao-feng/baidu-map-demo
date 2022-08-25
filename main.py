@@ -6,6 +6,7 @@ from ERNIE_API import ERNIE_API
 
 ssl._create_default_https_context = ssl._create_unverified_context  
 
+#API key
 KEYS = {
     'introduce_key':{
         'API_KEY':'X6CNT7VlkVOWQA5KvOld1GN7', 
